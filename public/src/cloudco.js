@@ -117,8 +117,7 @@ function get(path, callback) {
 
 function makeHistoryRow(claim) {
 
-    var date = moment(claim.date).format('YYYY-MM-DD');
-
+    var date = moment(claim.date).format('DD-MM-YYYY');
     var row = document.createElement('div');
     row.className = 'claimrow';
     row.innerHTML = '<div class="marker">' +
@@ -127,10 +126,9 @@ function makeHistoryRow(claim) {
         '<div class="claimdata">' + claim.policy + '</div>' +
         '<div class="claimdata">' + claim.provider + '</div>' +
         '<div class="centereddata">' + date + '</div>' +
-        '<div class="centereddata">' + claim.outcome + '</div>' +
-        '<div class="financeclaimdata">$' + claim.amount + '</div>' +
-        '<div class="financeclaimdata">$' + claim.payment + '</div>';
-
+        '<div class="centereddata">' + (claim.outcome=='FULL'?'ouvert':claim.outcome) + '</div>' +
+        '<div class="financeclaimdata">' + claim.amount + ' €</div>' +
+        '<div class="financeclaimdata">' + claim.payment + ' €</div>';
     return row;
 }
 
