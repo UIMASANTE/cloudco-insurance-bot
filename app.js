@@ -111,6 +111,7 @@ app.get('/login', function(req, res) {
     res.sendFile('./public/login.html',{root: __dirname});
 });
 
+
 app.get('/sociallogin', passport.authenticate(WebAppStrategy.STRATEGY_NAME, {
 	successRedirect: '/redirect',
 	forceLogin: true
@@ -207,6 +208,77 @@ app.post('/signup', function(req, res) {
 		});
 });
 
+/*
+app.get('/forgotpassword', function(req, res) {
+    res.sendFile('./public/forgotpassword.html',{root: __dirname});
+});
+var LANDING_PAGE_URL = "/index.html"
+
+*/
+/*
+passport.use(new WebAppStrategy({
+        tenantId: "3a013bb5-2ac7-449f-a413-df0a6274aaad",
+         clientId: "f75d20b1-2b09-4f01-80a7-d2efc5132e51",
+        secret: "OTA0Mjg1ZWQtNjhkMS00YTdjLTg4NmUtNGIxNDA2ZjI5YzIy",
+        oauthServerUrl: "https://appid-oauth.eu-de.bluemix.net/oauth/v3/3a013bb5-2ac7-449f-a413-df0a6274aaad",
+        redirectUri: "./login"
+    }));
+*/
+
+
+
+app.get("/forgot_password", passport.authenticate(WebAppStrategy.STRATEGY_NAME, {
+   successRedirect: "/index.html",
+   show: WebAppStrategy.FORGOT_PASSWORD
+}));
+/*
+
+app.get("/forgot_password", passport.authenticate(WebAppStrategy.STRATEGY_NAME, {
+   successRedirect: "/index.html",
+   show: WebAppStrategy.FORGOT_PASSWORD
+}));
+
+app.get('/forgot_password', function(req, res) {
+  var email = "xavier.mary@outook.com";
+  var language = "en";
+  var iamToken = "";
+  console.error("email: "+email);
+
+  selfServiceManager.forgotPassword(email, language, iamToken).then(function (user) {
+        logger.debug('forgot password success');
+		}).catch(function (err) {
+			if (err && err.code) {
+				console.error("error code:" + err.code + " ,bad sign up input: " + err.message);
+        res.status(500).json({
+          'message': err.message
+        });
+			} else {
+				console.error(err);
+				res.status(500).json({
+          'message': 'Something went wrong!'
+        });
+			}
+		});
+});
+*/
+
+
+/*
+app.get('/forgotpassword',
+    function(req, res) {
+        var email = req.query.email;
+        var language = "en";
+        var iamToken = "";
+        selfServiceManager.forgotPassword(email, language, iamToken).then(function (user) {
+        			logger.debug('forgot password success');
+        		}).catch(function (err) {
+        			logger.error(err);
+        		});
+        res.redirect('/login');
+      }        //req.logout();
+    });
+*/
+
 app.get('/isLoggedIn', function(req, res) {
     var result = {
         outcome: 'failure'
@@ -302,6 +374,8 @@ app.get('/history', isLoggedIn, function(req, res) {
 app.post('/submitClaim', function(req, res) {
 
     var claim = req.body;
+
+    console.log("app.js -> /submitClaim claim=", JSON.stringify(req.body));
 
     if (req.isAuthenticated()) {
         var owner = req.user.email;
@@ -502,8 +576,11 @@ function getUserPolicy(req, callback) {
 // =====================================
 app.post('/api/ana', function(req, res) {
 
+  console.log("app.js -> /api/ana claim=", JSON.stringify(req.body));
+
     // ensure user policies are loaded
     if (!req.body.context || !req.body.context.system) {
+
         getUserPolicy(req, function(err, doc) {
             if (err) {
                 res.status(err.code || 500).json(err);
@@ -565,7 +642,7 @@ function processChatMessage(req, res) {
                     console.log("Reply for claim file: ", reply);
 
                     if (reply && reply.outcome === 'success') {
-                        data.output.text = "Your " + context.claim_procedure + " claim for " + amount + " was successfully filed! " + reply.message;
+                        data.output.text = "Votre demande de prise en charge pour '" + context.claim_procedure + "' de " + amount + "€ a été correctement prise en compte! " + reply.message;
                         res.status(200).json(data);
 
                     } else {
@@ -583,6 +660,24 @@ function processChatMessage(req, res) {
 
 
 // launch ======================================================================
+// this function is called when you want the server to die gracefully
+// i.e. wait for existing connections
+var gracefulShutdown = function() {
+	console.log("Received kill signal, shutting down gracefully.");
+	server.close(function() {
+		console.log("Closed out remaining connections.");
+		process.exit()
+	});
+	// if after
+	setTimeout(function() {
+		console.error("Could not close connections in time, forcefully shutting down");
+		process.exit()
+	}, 10*1000);
+}
+// listen for TERM signal .e.g. kill
+process.on ('SIGTERM', gracefulShutdown);
+// listen for INT signal e.g. Ctrl-C
+process.on ('SIGINT', gracefulShutdown);
 
 io.on('connection', function(socket) {
     console.log("Sockets connected.");
