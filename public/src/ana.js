@@ -96,7 +96,7 @@ function userMessage(message) {
     xhr.send(JSON.stringify(params));
 }
 
-function getTimestamp() {
+function getTimestamp_EN() {
     var d = new Date();
     var hours = d.getHours();
     var minutes = d.getMinutes();
@@ -107,6 +107,20 @@ function getTimestamp() {
     var strTime = hours + ':' + minutes + ' ' + ampm;
     return strTime;
 }
+
+function getTimestamp() {
+    var d = new Date();
+    var hours = d.getHours();
+    var minutes = d.getMinutes();
+    //var ampm = hours >= 12 ? 'pm' : 'am';
+    //hours = hours % 12;
+    //hours = hours ? hours : 12;
+    hours = hours < 10 ? '0'+hours : hours;
+    minutes = minutes < 10 ? '0'+minutes : minutes;
+    var strTime = hours + ':' + minutes;
+    return strTime;
+}
+
 /**
  * @summary Display Chat Bubble.
  *
