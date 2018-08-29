@@ -6,14 +6,11 @@ function register() {
     var lastname = document.getElementById('lname').value;
     var username = document.getElementById('email').value;
     var password = document.getElementById('password').value;
-
     var message = document.getElementById('messagearea');
     message.innerHTML = '';
 
     var xhr = new XMLHttpRequest();
-
     var uri = 'signup';
-
     var user = {
         'username': username,
         'password': password,
@@ -44,7 +41,6 @@ function register() {
             console.error('Server error for passport. Return status of: ', xhr.statusText);
             message.innerHTML = response.message;
         }
-
         return false;
     };
 
@@ -90,7 +86,10 @@ function login() {
             }
         } else {
             console.log("Got error response from passport: ", JSON.stringify(response));
-            message.innerHTML = response.message;
+            if(response.message == 'Incorrect credentials')
+              message.innerHTML = "Connexion impossible, vérifez vos données";
+            else
+              message.innerHTML = response.message;
             console.error('Server error for passport. Return status of: ', xhr.statusText);
         }
 
@@ -162,8 +161,8 @@ function createBenefitRow(policy) {
         '</div>' +
         '</div>' +
         '<div class="benefitTitle">' + policy.title + '</div>' +
-        '<div id="' + policy.title + '-ToggleTextOpen" class="benefitMenu">View Benefit<i style = "padding-left:10px" class="fa fa-angle-down" aria-hidden="true"></i></div>' +
-        '<div id="' + policy.title + '-ToggleTextClose" class="benefitMenu" style = "display:none">Close Benefit<i style = "padding-left:10px" class="fa fa-angle-up" aria-hidden="true"></i></div>';
+        '<div id="' + policy.title + '-ToggleTextOpen" class="benefitMenu">Voir Prestation<i style = "padding-left:10px" class="fa fa-angle-down" aria-hidden="true"></i></div>' +
+        '<div id="' + policy.title + '-ToggleTextClose" class="benefitMenu" style = "display:none">Clore prestation<i style = "padding-left:10px" class="fa fa-angle-up" aria-hidden="true"></i></div>';
     row.onclick = function() {
         toggleDetails(policy.title);
     }
@@ -203,28 +202,28 @@ function createBenefitDetail(policy) {
     detail.innerHTML =
         '<div class="benefitfacts">' +
         '<div class="benefitfact">' +
-        '<div class="factlabel">benefit</div>' +
+        '<div class="factlabel">prestation</div>' +
         '<div class="factcheck">' + policy.description + '</div>' +
         '</div>' +
         '<div class="benefitfact">' +
-        '<div class="factlabel">limit</div>' +
-        '<div class="factcheck">$' + policy.claimLimit + '</div>' +
+        '<div class="factlabel">limite</div>' +
+        '<div class="factcheck">€' + policy.claimLimit + '</div>' +
         '</div>' +
         '<div class="benefitfact">' +
-        '<div class="factlabel">coverage</div>' +
+        '<div class="factlabel">couverture</div>' +
         '<div class="factcheck">' + policy.percentCovered + '%</div>' +
         '</div>' +
         '<div class="benefitfact">' +
-        '<div class="factlabel">term</div>' +
+        '<div class="factlabel">terme</div>' +
         '<div class="factcheck">' + policy.scope + '</div>' +
         '</div>' +
         '<div class="benefitfact">' +
-        '<div class="factlabel">start</div>' +
-        '<div class="factcheck">Jan 1 2016</div>' +
+        '<div class="factlabel">début</div>' +
+        '<div class="factcheck">Jan 1 2018</div>' +
         '</div>' +
         '<div class="benefitfact">' +
-        '<div class="factlabel">end</div>' +
-        '<div class="factcheck">Dec 31 2017</div>' +
+        '<div class="factlabel">fin</div>' +
+        '<div class="factcheck">Dec 31 2019</div>' +
         '</div>' +
         '<div class="benefitfact">' +
         '<div class="factlabel">code</div>' +
@@ -289,7 +288,7 @@ function getBenefits() {
                 policyKeys.push(policy.type);
                 var benefitTitle = document.createElement('div');
                 benefitTitle.className = "benefitTypeTitle";
-                benefitTitle.innerHTML = policy.type + " Benefits";
+                benefitTitle.innerHTML = " Prestation " + policy.type ;
                 var benefitEntity = createBenefitEntity(policy.type);
                 benefitset.appendChild(benefitTitle);
                 benefitset.appendChild(benefitEntity);
@@ -389,9 +388,9 @@ function submitClaim(source) {
             var reply = JSON.parse(xhr.responseText);
 
             if (reply.outcome === 'success') {
-                claimmessages.innerHTML = 'Your claim was filed.';
+                claimmessages.innerHTML = 'Votre demande a été déposée.';
             } else {
-                claimmessages.innerHTML = 'Something went wrong - try again';
+                claimmessages.innerHTML = 'Quelque chose s\'est mal passé - essayez à nouveau';
 
             }
         } else {
@@ -414,8 +413,6 @@ function checkStatus() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             var reply = JSON.parse(xhr.responseText);
             console.log("Reply: ", reply);
-
-
             if (reply.outcome === 'success') {
                 if (askWatson) {
                     askWatson.style.display = 'inherit';
