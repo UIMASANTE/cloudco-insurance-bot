@@ -4,27 +4,19 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="stylesheet" href="/stylesheets/claims.css">
-
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/benefit.css">
+    <link rel="stylesheet" href="/stylesheets/font-awesome/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-    <!-- Core  -->
-    <!--
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
--->
 </head>
 <body class="homePage" onload="getClaims()">
-
-    <div class="container">
-        <div class="outline">
+  <div class="healthContainer"><!--  <div class="container"><div class="outline">-->
             <header>
                 <div class="banner">
                     <div class="titleArea">
-
                         <div class="logo"><img class="logoImage" src="images/wash/cloud.svg"></div>
                         <div class="name"><a class="home" href=".">Assurance Service Internet</a></div>
-
                     </div>
                     <div class="loginArea">
                         <div class="menu"><a class="menulink" href="./about">A propos</a></div>
@@ -39,18 +31,23 @@
                 <div style="margin:40px;">
                     <div class="benefitkit">
                         <div class="claimhistory">
-                            <div id="header" class="header">Historique dossier</div>
-                            <div id="owner" class="owner"></div>
+                          <div id="header" class="header">Assurance SANTE</div>
+                          <div id="owner" class="owner" style = "display:none"></div>
+                          <div class="healthTabArea">
+                            <div  class = "healthTab"  onClick="location.href='./health'"><span id="benefitsTabMenu" class = "tabLink">PRESTATION SANTE</span></div>
+                            <div  class = "healthTab" onClick="location.href='./health'"><span id="claimTabMenu" class = "tabLink">DÉPOSER UN DOSSIER</span></div>
+                            <div  accesskey="" class = "healthTab" onClick="location.href='./claims'"><span id="historyTabMenu" class = "tabLink selected">HISTORIQUE DOSSIER</span></div>
+
+                          </div>
                             <div class="claimheader">
                                 <div class="marker">
-                                    <!--                                    <div class="bullet"></div>-->
                                 </div>
                                 <div class="category">PRESTATION</div>
                                 <div class="category">FOURNISSEUR</div>
                                 <div class="centereddata">DATE</div>
-                                <div class="centereddata">RESULTAT</div>
-                                <div class="financeclaimdata">DOSSIER</div>
-                                <div class="financeclaimdata">PAIEMENT</div>
+                                <div class="centereddata">STATUT</div>
+                                <div class="financeclaimdata">PAYE</div>
+                                <div class="financeclaimdata">REMBOURSE</div>
                             </div>
                             <div class="claimlist" id="claimlist">
                             </div>
