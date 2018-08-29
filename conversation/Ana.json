@@ -3,41 +3,51 @@
 	"intents": [{
 		"intent": "make_claim",
 		"examples": [{
-			"text": "Can I file a claim?"
+			"text": "Puis-je déposer un dossier?"
 		}, {
-			"text": "Claim"
+			"text": "Demande"
 		}, {
-			"text": "How do I file a claim?"
+			"text": "Depot feuille de soins"
 		}, {
-			"text": "I just got glasses."
+			"text": "feuille de soins"
 		}, {
-			"text": "I need to make a claim"
+			"text": "Comment faire une demande de remboursement ?"
 		}, {
-			"text": "I recently went to the doctor."
+			"text": "je viens d'acheter des lunettes"
 		}, {
-			"text": "I want to file a claim."
+			"text": "Je dois faire une demande"
 		}, {
-			"text": "I want to file a recent expense."
+			"text": "Je viens de voir un docteur"
+		}, {
+			"text": "Je viens de voir un médecin"
+		}, {
+			"text": "Je veux me faire rembourser"
+		}, {
+			"text": "Je veux envoyer ma feuille de soins"
 		}],
 		"description": null
 	}, {
 		"intent": "select_procedure",
 		"examples": [{
-			"text": "I need information about eye wear"
+			"text": "J'ai besoin d'information sur des lunettes"
 		}, {
-			"text": "I need information about glasses"
+			"text": "J'ai besoin d'information sur des lentilles"
 		}, {
-			"text": "I need information about therapy"
+			"text": "J'ai besoin d'information sur une thérapie"
 		}, {
-			"text": "I need information about tooth repair"
+			"text": "J'ai besoin d'information sur des soins dentaire"
 		}, {
-			"text": "Tell me what my coverage is"
+			"text": "Expliquez moi mon assurance santé"
 		}, {
-			"text": "Tell me what my limit is"
+			"text": "Quelle est ma couverture santé"
 		}, {
-			"text": "Tell me what my limit is for eye wear"
+			"text": "Sur quoi suis-je assuré pour ma santé"
 		}, {
-			"text": "Yes I need to know my policy for buying new glasses"
+			"text": "Dites moi quel est la limite"
+		}, {
+			"text": "Dites moi quel est la limite pour des lunettes"
+		}, {
+			"text": "Oui j'ai besoin de connaitre ma police pour acheter de nouvelles lunettes"
 		}],
 		"description": null
 	}, {
@@ -45,507 +55,605 @@
 		"examples": [{
 			"text": "Bye"
 		}, {
-			"text": "Catch you later"
+			"text": "Au revoir"
 		}, {
-			"text": "Goodbye"
+			"text": "A plus"
 		}, {
-			"text": "I don't need any more help"
+			"text": "Je n'ai plus besoin d'aide"
 		}, {
-			"text": "I'm done"
+			"text": "C'est bon"
 		}, {
-			"text": "Later"
+			"text": "OK"
 		}, {
-			"text": "Nothing more"
+			"text": "Rien de plus"
 		}, {
-			"text": "See ya"
+			"text": "tchao"
 		}, {
-			"text": "That's all"
+			"text": "Ciao"
 		}],
 		"description": null
 	}, {
 		"intent": "find-doctor",
 		"examples": [{
-			"text": "Got to do something about my depression"
+			"text": "Je dois faire quelque chose au sujet de ma dépression"
 		}, {
-			"text": "I am depressed and need help"
+			"text": "Je suis déprimé et j'ai besoin d'aide"
 		}, {
-			"text": "I am looking for psychotherapie"
+			"text": "Je cherche une psychothérapie"
 		}, {
-			"text": "I need a doctor"
+			"text": "Je cherche un psychothérapeute"
 		}, {
-			"text": "my shoulder broke"
+			"text": "J'ai besoin d'un docteur"
 		}, {
-			"text": "Where can I find a dentist?"
+			"text": "J'ai une épaule cassée"
 		}, {
-			"text": "Where can I find an in policy"
+			"text": "J'ai un bras cassé"
 		}, {
-			"text": "Where can I find an in-policy"
+			"text": "Ou puis-je trouvé dentiste?"
 		}, {
-			"text": "Who is my closest dentist"
+			"text": "Ou puis-je trouvé un docteur agrée"
 		}, {
-			"text": "Who is my closest doctor"
+			"text": "Ou puis-je trouvé un docteur subventionné"
+		}, {
+			"text": "Qui est mon dentiste le plus proche"
+		}, {
+			"text": "Qui est mon docteur le plus proche"
 		}],
 		"description": null
 	}, {
 		"intent": "select_detail",
 		"examples": [{
-			"text": "eye glasses"
+			"text": "lunettes de vue"
 		}, {
-			"text": "Hi Ana, I have a cavity that needs to be filled and I want to know what my coverage is"
+			"text": "Bonjour Ana j'ai une cavité qui doit être bouché et je veux savoir quelle est ma couverture"
 		}, {
-			"text": "I need the code for"
+			"text": "j'ai une cavité qui doit être soigné et je veux savoir quelle est ma couverture"
 		}, {
-			"text": "I need the term for"
+			"text": "J'ai besoin du code pour"
 		}, {
-			"text": "till now nothing but I will have to see my dentist next week and wonder which services are covered by my plan"
+			"text": "J'ai besoin du terme pour"
 		}, {
-			"text": "What is my term for"
+			"text": "jusqu'à maintenant rien mais je devrai voir mon dentiste la semaine prochaine et me je demande quels services sont couverts par mon assurance"
 		}, {
-			"text": "What is the code for"
+			"text": "Quel est mon terme pour"
 		}, {
-			"text": "What is the limit for glasses?"
+			"text": "Quel est mon code pour"
 		}, {
-			"text": "When does my plan end?"
+			"text": "Quelle est la limite pour les lunettes ?"
+		}, {
+			"text": "Quand finit mon assurance ?"
+		}, {
+			"text": "Quand s'arrete mon contrat ?"
+		}, {
+			"text": "Quand termine mon assurance ?"
+		}, {
+			"text": "Quand finit mon plan ?"
 		}],
 		"description": null
 	}, {
 		"intent": "coverage",
 		"examples": [{
-			"text": "What's the maximum allowance for getting new glasses?"
+			"text": "Quelle est l'allocation maximale pour obtenir de nouvelles lunettes ?"
 		}, {
-			"text": "Coverage"
+			"text": "Couverture"
 		}, {
-			"text": "How much"
+			"text": "Quelles sont mes garanties"
 		}, {
-			"text": "How much coverage do I have for"
+			"text": "Combien"
 		}, {
-			"text": "How much does my plan cover"
+			"text": "Combien de couverture ai-je pour"
 		}, {
-			"text": "How much do I have left"
+			"text": "Combien couvre mon plan"
 		}, {
-			"text": "How much do I have left in my deductible?"
+			"text": "Combien me reste-t-il"
 		}, {
-			"text": "How much more money is in my orthodontics benefit?"
+			"text": "Combien reste-t-il sur ma franchise ?"
 		}, {
-			"text": "I broke my glasses"
+			"text": "Combien d'argent est disponible pour l'orthodontie?"
 		}, {
-			"text": "I need a chiropractor"
+			"text": "J'ai cassé mes lunettes"
 		}, {
-			"text": "I need braces"
+			"text": "J'ai brisé mes verres"
 		}, {
-			"text": "I need braces. Am I covered?"
+			"text": "J'ai besoin d'un chiropraticien"
 		}, {
-			"text": "I need glasses"
+			"text": "J'ai besoin d'appareils dentaires"
 		}, {
-			"text": "I need my back adjusted"
+			"text": "J'ai besoin d'appareils dentaires. Suis-je assuré?"
 		}, {
-			"text": "I need my spine adjusted"
+			"text": "J'ai besoin d'appareils dentaires. Serai-je remboursé?"
 		}, {
-			"text": "I need new"
+			"text": "J'ai besoin de lunettes"
 		}, {
-			"text": "I need new glasses"
+			"text": "J'ai mal au dos"
 		}, {
-			"text": "I want to get contacts"
+			"text": "J'ai besoin d'un redressement de ma colonne vertébrale"
 		}, {
-			"text": "I want to get glasses"
+			"text": "J'ai besoin de nouveau"
 		}, {
-			"text": "I want to purchase"
+			"text": "J'ai besoin de nouvelle"
 		}, {
-			"text": "I want to purchase new glasses"
+			"text": "J'ai besoin de nouvelles lunettes"
 		}, {
-			"text": "What does a cavity cost me?"
+			"text": "Je veux obtenir des lentilles de contact"
 		}, {
-			"text": "What is my coverage for physical therapist?"
+			"text": "Je veux obtenir des lunettes"
 		}, {
-			"text": "would my insurance pay for broken glasses?"
+			"text": "Je veux acheter"
+		}, {
+			"text": "Je veux acheter de nouvelles lunettes"
+		}, {
+			"text": "Combien une cavité me coûte ?"
+		}, {
+			"text": "Que coûte une cavité à soigner ?"
+		}, {
+			"text": "Qu'est-ce qu'une cavité me coûte ?"
+		}, {
+			"text": "Quelle est ma couverture pour un kinésithérapeute ?"
+		}, {
+			"text": "mon assurance paierait-elle pour des lunettes cassées ?"
 		}],
 		"description": null
 	}, {
 		"intent": "still-here",
 		"examples": [{
-			"text": "Come back"
+			"text": "Reviens"
 		}, {
-			"text": "I'm not done"
+			"text": "Revenez"
 		}, {
-			"text": "I need more help"
+			"text": "je n'ai pas fini"
 		}, {
-			"text": "I wasn't done"
+			"text": "J'ai besoin de plus d'aide"
 		}, {
-			"text": "I wasn't finished"
+			"text": "Je n'avais pas fini"
 		}, {
-			"text": "k"
+			"text": "Encore une question"
 		}, {
-			"text": "Still talking with me?"
+			"text": "ok"
+		}, {
+			"text": "Toujours en discussion avec moi ?"
 		}],
 		"description": null
 	}, {
 		"intent": "General_Greetings",
 		"examples": [{
-			"text": "Good day"
+			"text": "Bonne journée"
 		}, {
-			"text": "Good evening"
+			"text": "Bonsoir"
 		}, {
-			"text": "Good morning"
+			"text": "Bonjour"
 		}, {
-			"text": "Good to see you"
+			"text": "Content de te voir"
 		}, {
-			"text": "Greetings"
+			"text": "Content de vous voir"
 		}, {
-			"text": "Have you been well?"
+			"text": "Salutations"
 		}, {
-			"text": "Hello Agent"
+			"text": "As tu été bien ?"
 		}, {
-			"text": "Hello"
+			"text": "Avez vous été bien ?"
 		}, {
-			"text": "Hello I am looking for some help here"
+			"text": "Bonjour Agent"
 		}, {
-			"text": "Hey how are you doing"
+			"text": "Salut"
 		}, {
-			"text": "Hey there all"
+			"text": "Bonjour je cherche de l'aide ici"
 		}, {
-			"text": "Hey there"
+			"text": "Salut comment allez-vous"
 		}, {
-			"text": "Hey twin"
+			"text": "Salut comment vas-tu"
 		}, {
-			"text": "Hey you"
+			"text": "Salut tout le monde"
 		}, {
-			"text": "Hi advisor"
+			"text": "Salut à tous"
 		}, {
-			"text": "Hi there"
+			"text": "Salut frangin"
 		}, {
-			"text": "How are things going?"
+			"text": "Hé toi"
 		}, {
-			"text": "How are you today?"
+			"text": "Salut conseiller"
 		}, {
-			"text": "How have you been?"
+			"text": "Bonjour conseiller"
 		}, {
-			"text": "How is it going?"
+			"text": "Comment vont les choses ?"
 		}, {
-			"text": "How r u?"
+			"text": "Comment vas-tu aujourd'hui ?"
 		}, {
-			"text": "Looking good eve"
+			"text": "Comment allez-vous aujourd'hui ?"
 		}, {
-			"text": "Ok take me back"
+			"text": "Comment avez-vous été?"
 		}, {
-			"text": "What's new?"
+			"text": "Comment as-tu été?"
 		}, {
-			"text": "What's up?"
+			"text": "Comment ça se passe ?"
 		}, {
-			"text": "Who is this?"
+			"text": "Tout va bien ?"
 		}, {
-			"text": "You there"
+			"text": "Avoir l'air bien"
 		}, {
-			"text": "I am doing good."
+			"text": "Ok reprends moi"
+		}, {
+			"text": "Quoi de neuf ?"
+		}, {
+			"text": "quoi de neuf mec ?"
+		}, {
+			"text": "Qui est-ce ?"
+		}, {
+			"text": "Vous êtes la"
+		}, {
+			"text": "Je fais bien"
 		}],
-		"description": "Greet the bot."
+		"description": "Salue le bot."
 	}, {
 		"intent": "General_Negative_Feedback",
 		"examples": [{
-			"text": "Do not like you?"
+			"text": "Ne t'aime pas ?"
 		}, {
-			"text": "Everyone hates you"
+			"text": "Ne vous aime pas ?"
 		}, {
-			"text": "Hate you"
+			"text": "Tout le monde vous déteste"
 		}, {
-			"text": "I do not like you"
+			"text": "vous déteste"
 		}, {
-			"text": "I hate this!"
+			"text": "te déteste"
 		}, {
-			"text": "I hate you"
+			"text": "je ne t'aime pas"
 		}, {
-			"text": "It is annoying"
+			"text": "je déteste ça !"
 		}, {
-			"text": "Quit annoying me"
+			"text": "je te deteste"
 		}, {
-			"text": "Robots are boring"
+			"text": "C'est ennuyant"
 		}, {
-			"text": "Robots are stupid"
+			"text": "Arrête de m'embêter"
 		}, {
-			"text": "Stupid"
+			"text": "Les robots sont ennuyeux"
 		}, {
-			"text": "Why are you so annoying?"
+			"text": "Les robots sont stupides"
 		}, {
-			"text": "Why are you stupid?"
+			"text": "Stupide"
 		}, {
-			"text": "You are having delusions"
+			"text": "Pourquoi es-tu si ennuyeux ?"
 		}, {
-			"text": "You are on my nerves"
+			"text": "Pourquoi es-tu stupide ?"
 		}, {
-			"text": "You are very frustrating"
+			"text": "Pourquoi êtes-vous si ennuyeux ?"
 		}, {
-			"text": "You do not seem smart"
+			"text": "Pourquoi êtes-vous stupide ?"
 		}, {
-			"text": "You're really frustrating"
+			"text": "Vous avez des délires"
 		}, {
-			"text": "You're really irritating"
+			"text": "Tu délires"
 		}, {
-			"text": "You're too stupid"
+			"text": "Tu es sur mes nerfs"
+		}, {
+			"text": "Vous êtes très frustrant"
+		}, {
+			"text": "Vous ne semblez pas intelligent"
+		}, {
+			"text": "Tu es vraiment frustrant"
+		}, {
+			"text": "Vous êtes vraiment frustrant"
+		}, {
+			"text": "Vous êtes vraiment irritant"
+		}, {
+			"text": "Tu es vraiment irritant"
+		}, {
+			"text": "Tu es trop stupide"
 		}],
-		"description": "Express unfavorable feedback."
+		"description": "Exprime des commentaires défavorables."
 	}, {
 		"intent": "positive",
 		"examples": [{
-			"text": "fantastic"
+			"text": "fantastique"
 		}, {
-			"text": "I love you"
+			"text": "Je vous aime"
 		}, {
-			"text": "I really appreciate it"
+			"text": "J'ai vraiment apprécié"
 		}, {
 			"text": "muchas gracias"
 		}, {
-			"text": "thanks"
+			"text": "au poil"
 		}, {
-			"text": "thank you"
+			"text": "Merci"
 		}, {
-			"text": "thank you Ana"
+			"text": "Merci Ana"
 		}, {
-			"text": "thank you so much"
+			"text": "Merci beaucoup"
 		}, {
 			"text": "that's great"
 		}, {
-			"text": "this is fantastic"
+			"text": "C'est fantastique"
 		}, {
-			"text": "you're awesome"
+			"text": "Vous êtes formidable"
 		}],
 		"description": null
 	}, {
 		"intent": "select_service",
 		"examples": [{
-			"text": "I need details about my dental"
+			"text": "J'ai besoin de détails sur mes soins dentaires"
 		}, {
-			"text": "I need information about my dental plan"
+			"text": "J'ai besoin d'informations sur mon plan de soins dentaires"
 		}, {
-			"text": "I need information about my vision plan"
+			"text": "J'ai besoin d'informations sur ma garantie optique"
 		}, {
-			"text": "I need information about physical"
+			"text": "J'ai besoin d'informations sur mon plan médical"
 		}, {
-			"text": "I need to know about my vision plan"
+			"text": "J'ai besoin de connaître ma garantie optique"
 		}, {
-			"text": "I want some details on my vision plan"
+			"text": "Je veux des détails sur mon contrat optique"
 		}, {
-			"text": "I want some info about my vision plan"
+			"text": "Je veux des informations sur mon plan optique"
 		}, {
-			"text": "Need info about dental"
+			"text": "Besoin d'informations sur les soins dentaires"
 		}, {
 			"text": "Vision"
+		}, {
+			"text": "Opticien"
+		}, {
+			"text": "Optique"
 		}],
 		"description": null
 	}, {
 		"intent": "General_Ending",
 		"examples": [{
+			"text": "Bye"
+		}, {
 			"text": "Bye bye"
 		}, {
-			"text": "Bye now"
+			"text": "au revoir"
 		}, {
-			"text": "Catch you later"
+			"text": "Et maintenant au revoir"
 		}, {
-			"text": "Cya later"
+			"text": "A plus"
 		}, {
-			"text": "Ending this session"
+			"text": "A plus tard"
 		}, {
-			"text": "End trial"
+			"text": "Termine cette session"
 		}, {
-			"text": "Finished now, good bye"
+			"text": "Fin de l'essai"
 		}, {
-			"text": "Get lost"
+			"text": "Terminé maintenant au revoir"
 		}, {
-			"text": "Go away"
+			"text": "Foutez le camp"
 		}, {
-			"text": "Going now"
+			"text": "Allez-vous en"
 		}, {
-			"text": "Goodbye"
+			"text": "Je pars maintenant"
 		}, {
-			"text": "Good. bye."
+			"text": "Je pars"
 		}, {
-			"text": "Go off"
+			"text": "Au revoir"
 		}, {
-			"text": "Have a nice day?"
+			"text": "A bientot"
 		}, {
-			"text": "Hey bot go away"
+			"text": "Adieu"
 		}, {
-			"text": "I am leaving"
+			"text": "Bonne journée"
 		}, {
-			"text": "I am out of here"
+			"text": "Hey bot va t'en"
 		}, {
-			"text": "I d like to stop doing this"
+			"text": "je m'en vais"
 		}, {
-			"text": "I have got to go"
+			"text": "je fous le camp"
 		}, {
-			"text": "I'm done"
+			"text": "Je voudrais arrêter ça"
 		}, {
-			"text": "Im done"
+			"text": "je dois y aller"
 		}, {
-			"text": "Im good thank you"
+			"text": "J'ai fini"
 		}, {
-			"text": "I'm leaving now"
+			"text": "je suis fini"
 		}, {
-			"text": "It was nice chatting with you"
+			"text": "tout va bien merci"
 		}, {
-			"text": "I want to quit"
+			"text": "je pars maintenant"
 		}, {
-			"text": "Ok goodbye"
+			"text": "C'était gentil de bavarder avec toi"
 		}, {
-			"text": "See you later"
+			"text": "Je veux quitter"
 		}, {
-			"text": "Shut up"
+			"text": "Je veux cesser"
 		}, {
-			"text": "Stop doing this"
+			"text": "Je veux arreter"
 		}, {
-			"text": "Stop talking to me"
+			"text": "OK au revoir"
 		}, {
-			"text": "Thanks, bye!"
+			"text": "À toute à l'heure"
 		}, {
-			"text": "Thanks very much, bye!"
+			"text": "tais-toi"
 		}, {
-			"text": "Thank you for your time"
+			"text": "taisez-vous"
 		}, {
-			"text": "That is all"
+			"text": "Ferme-La"
 		}, {
-			"text": "That's everything"
+			"text": "Arrête de faire ça"
 		}, {
-			"text": "Time to go"
+			"text": "Arrête de me parler"
 		}, {
-			"text": "See you"
+			"text": "Merci et salut"
+		}, {
+			"text": "Merci salut"
+		}, {
+			"text": "Merci salut!"
+		}, {
+			"text": "Merci beaucoup salut!"
+		}, {
+			"text": "Merci pour votre temps"
+		}, {
+			"text": "C'est tout"
+		}, {
+			"text": "C'est bon"
+		}, {
+			"text": "Il est temps de partir"
+		}, {
+			"text": "Il est temps d'y aller"
 		}],
-		"description": "End the conversation."
+		"description": "Fin de la conversation."
 	}, {
 		"intent": "General_Positive_Feedback",
 		"examples": [{
-			"text": "Brilliant!"
+			"text": "Brillant!"
 		}, {
-			"text": "Can't believe you are that good"
+			"text": "Je ne peux pas croire que vous êtes si bon"
 		}, {
-			"text": "How cool is this?"
+			"text": "Comme c'est cool"
 		}, {
-			"text": "I like what you did there! :)"
+			"text": "J'aime ce que tu as fait là-bas! :)"
 		}, {
-			"text": "I'm looking forward to working with you again! :)"
+			"text": "J'ai hâte de travailler à nouveau avec vous! :)"
 		}, {
-			"text": "Love your work"
+			"text": "aime ton travail"
 		}, {
-			"text": "Ok thank you"
+			"text": "aime votre travail"
 		}, {
-			"text": "Thank you"
+			"text": "D'accord merci"
 		}, {
-			"text": "This is good"
+			"text": "Merci"
 		}, {
-			"text": "This is great"
+			"text": "C'est bon"
 		}, {
-			"text": "This is so cool"
+			"text": "C'est bien"
 		}, {
-			"text": "You are awesome"
+			"text": "C'est trop cool"
 		}, {
-			"text": "You are great"
+			"text": "Tu es incroyable"
 		}, {
-			"text": "You are the best"
+			"text": "Vous êtes formidable"
 		}, {
-			"text": "You are wonderful"
+			"text": "Tu es le meilleur"
 		}, {
-			"text": "You gave me exactly what I need!"
+			"text": "Vous êtes merveilleux"
 		}, {
-			"text": "You're a genius!"
+			"text": "Tu m'as donné exactement ce dont j'ai besoin!"
 		}, {
-			"text": "You the man"
+			"text": "Vous êtes le meilleur"
 		}, {
-			"text": "You've been so helpful :)"
+			"text": "tu es merveilleux"
+		}, {
+			"text": "Vous m'avez donné exactement ce dont j'ai besoin!"
+		}, {
+			"text": "Tu es un génie!"
+		}, {
+			"text": "Tu es le bot de la situation"
+		}, {
+			"text": "Tu es l'homme de la situation"
+		}, {
+			"text": "Tu es la femme de la situation"
+		}, {
+			"text": "Vous avez été si utile :)"
 		}],
-		"description": "Express positive sentiment or gratitude."
+		"description": "Exprime sentiment positif ou gratitude."
 	}, {
 		"intent": "off_topic",
 		"examples": [{
-			"text": "Are you a robot?"
+			"text": "Etes-vous un robot ?"
 		}, {
-			"text": "Are you real?"
+			"text": "Es-tu réel ?"
 		}, {
-			"text": "Are you single?"
+			"text": "Es-tu célibataire ?"
 		}, {
-			"text": "Do you like your job?"
+			"text": "Est-ce que tu aimes ton travail ?"
 		}, {
-			"text": "What is the meaning of life?"
+			"text": "Quel est le sens de la vie ?"
 		}, {
-			"text": "What is the weather?"
+			"text": "Quelle est la météo ?"
 		}],
 		"description": null
 	}, {
 		"intent": "claim_procedure",
 		"examples": [{
-			"text": "Dr Feel Good"
+			"text": "j'ai vu un médecin"
 		}, {
-			"text": "Glasses"
+			"text": "j'ai vu un opthalmogue"
 		}, {
-			"text": "I got my teeth cleaned"
+			"text": "j'ai vu un docteur"
 		}, {
-			"text": "I got new contacts"
+			"text": "j'ai vu un opticien"
 		}, {
-			"text": "I got new glasses"
+			"text": "Lunettes"
 		}, {
-			"text": "I had a therapy session"
+			"text": "J'ai eu un détartrage"
 		}, {
-			"text": "I had my back adjusted"
+			"text": "J'ai de nouvelles lentilles"
 		}, {
-			"text": "I just got new contact lens"
+			"text": "J'ai de nouveaux verres de contact"
 		}, {
-			"text": "I just got new contacts"
+			"text": "j'ai de nouvelles lunettes"
 		}, {
-			"text": "I just got new glasses"
+			"text": "J'ai eu une séance de thérapie"
 		}, {
-			"text": "I just spoke to a therapist"
+			"text": "J'ai eu le dos ajusté"
 		}, {
-			"text": "I need reimbursement for"
+			"text": "J'ai de nouvelles lentilles de contact"
 		}, {
-			"text": "I need to file a claim for contacts"
+			"text": "Je viens de recevoir de nouvelles lentilles de contact"
 		}, {
-			"text": "I need to file a claim for glasses"
+			"text": "Je viens de recevoir de nouvelles lunettes"
 		}, {
-			"text": "I need to file a claim for physical therapy"
+			"text": "Je viens de parler à un thérapeute"
 		}, {
-			"text": "I need to file a claim for teeth cleaning"
+			"text": "J'ai besoin de remboursement pour"
 		}, {
-			"text": "I need to make a claim for glasses"
+			"text": "J'ai besoin de déposer une demande pour des lentilles"
 		}, {
-			"text": "I want reimbursement for"
+			"text": "J'ai besoin de déposer une demande pour des lunettes"
 		}, {
-			"text": "Teeth cleaning"
+			"text": "J'ai besoin de déposer une demande pour des physical therapy"
+		}, {
+			"text": "J'ai besoin de déposer une demande pour un détartrage"
+		}, {
+			"text": "J'ai besoin de déposer une demande pour un examen dentaire"
+		}, {
+			"text": "Je veux être rembourser pour"
+		}, {
+			"text": "Je veux un remboursement pour"
+		}, {
+			"text": "détartrage"
 		}],
 		"description": null
 	}, {
 		"intent": "General_Jokes",
 		"examples": [{
-			"text": "Another joke"
+			"text": "Une autre blague"
 		}, {
-			"text": "Are there jokes?"
+			"text": "Y a-t-il des blagues ?"
 		}, {
-			"text": "Can you tell a joke?"
+			"text": "Peux tu raconter une blague ?"
 		}, {
-			"text": "Can you tell me a joke?"
+			"text": "Pouvez-vous me dire une blague ?"
 		}, {
-			"text": "Do you have a joke?"
+			"text": "Avez vous une blague ?"
 		}, {
-			"text": "Do you have humor?"
+			"text": "As-tu de l'humour ?"
 		}, {
-			"text": "Do you like fun?"
+			"text": "Aimes-tu l'amusement ?"
 		}, {
-			"text": "Do you like humor?"
+			"text": "Aimez-vous l'humour ?"
 		}, {
-			"text": "I am getting bored"
+			"text": "Je commence à m'ennuyer"
 		}, {
-			"text": "I'm bored"
+			"text": "Je m'ennuie"
 		}, {
-			"text": "I want a joke"
+			"text": "Je veux une blague"
 		}, {
-			"text": "One more joke"
+			"text": "Une blague de plus"
 		}, {
-			"text": "Surprise me with something hilarious"
+			"text": "Une autre blague"
 		}, {
-			"text": "Tell me a joke"
+			"text": "Encore une blague"
 		}, {
-			"text": "Tell me something funny"
+			"text": "Surprenez moi avec quelque chose d'hilarant"
 		}, {
-			"text": "What do you do for fun?"
+			"text": "Raconte moi une blague"
 		}, {
-			"text": "What is your favorite joke?"
+			"text": "Dis moi quelque chose de drôle"
+		}, {
+			"text": "Que faites-vous pour le plaisir ?"
+		}, {
+			"text": "Quelle est ta blague préférée ?"
 		}],
-		"description": "Request a joke."
+		"description": "Demande une blague."
 	}, {
 		"intent": "greeting",
 		"examples": [{
@@ -553,441 +661,527 @@
 		}, {
 			"text": "Anya"
 		}, {
-			"text": "Don't go"
+			"text": "Ne pars pas"
 		}, {
-			"text": "Good afternoon"
+			"text": "Bonne aprés midi"
 		}, {
-			"text": "Good evening"
+			"text": "Bonsoir"
 		}, {
-			"text": "Good morning"
+			"text": "Bonjour"
 		}, {
-			"text": "Hello"
+			"text": "Salut"
 		}, {
-			"text": "Hey Ana"
+			"text": "Salut Ana"
 		}, {
-			"text": "Hi"
+			"text": "Coucou"
 		}, {
 			"text": "Hi Ana"
 		}, {
-			"text": "It's me again"
+			"text": "C'est encore moi"
 		}],
 		"description": null
 	}, {
 		"intent": "General_Connect_to_Agent",
 		"examples": [{
-			"text": "Agent help"
+			"text": "Agent à l'aide"
 		}, {
-			"text": "A real agent, please."
+			"text": "Un vrai agent s'il vous plait."
 		}, {
-			"text": "Call agent"
+			"text": "Appelez un agent"
 		}, {
-			"text": "Can I connect to an agent?"
+			"text": "Puis-je me connecter à un agent ?"
 		}, {
-			"text": "Can I speak to a human please?"
+			"text": "Puis-je parler à un agent ?"
 		}, {
-			"text": "Can I speak to a live person?"
+			"text": "Puis-je parler à un humain s'il vous plaît ?"
 		}, {
-			"text": "Can I speak to an advisor?"
+			"text": "Puis-je parler à une personne en direct ?"
 		}, {
-			"text": "Can I speak with somebody?"
+			"text": "Puis-je parler à un conseiller ?"
 		}, {
-			"text": "Can I talk to someone?"
+			"text": "Puis-je parler avec quelqu'un ?"
 		}, {
-			"text": "Can you assist me to connect to an agent?"
+			"text": "Puis-je parler à quelqu'un ?"
 		}, {
-			"text": "Can you connect me with a real person?"
+			"text": "Pouvez-vous m'aider à me connecter à un agent ?"
 		}, {
-			"text": "Connect me to a live operator please."
+			"text": "Pouvez-vous me mettre en relation avec une vraie personne ?"
 		}, {
-			"text": "Contact person"
+			"text": "Connectez-moi à un opérateur en direct s'il vous plaît."
 		}, {
-			"text": "Could you please transfer me to your master?"
+			"text": "Contacte une personne"
 		}, {
-			"text": "Customer service representative please."
+			"text": "Appelle une personne"
 		}, {
-			"text": "Do not want a robot?"
+			"text": "Pourriez-vous s'il vous plaît me transférer à votre maître ?"
 		}, {
-			"text": "Hi can you transfer me"
+			"text": "Représentant du service clientèle s'il vous plaît."
 		}, {
-			"text": "How can I skip the recorded menu and go straight to a live person?"
+			"text": "Je ne veux pas de robot"
 		}, {
-			"text": "I don't want to talk to a bot."
+			"text": "Salut pouvez vous me transférer"
 		}, {
-			"text": "I don't want to talk to you"
+			"text": "Comment puis-je sauter le menu enregistré et aller directement à une personne en direct ?"
 		}, {
-			"text": "I need to speak to a representative. How would I go about doing so?"
+			"text": "Je ne veux pas parler à un bot."
 		}, {
-			"text": "Is there anyone there I can actually talk to for real?"
+			"text": "Je ne veux pas te parler"
 		}, {
-			"text": "I want agent"
+			"text": "J'ai besoin de parler à un représentant. Comment pourrais-je l'avoir ?"
 		}, {
-			"text": "I want a manager"
+			"text": "Y a-t-il quelqu'un à qui je puisse parler réellement ?"
 		}, {
-			"text": "I want an agent to help me"
+			"text": "appelle le patron"
 		}, {
-			"text": "I want to talk to a person"
+			"text": "Je veux un agent"
 		}, {
-			"text": "I would like to speak to a human"
+			"text": "Je veux un manager"
 		}, {
-			"text": "I would like to speak to someone"
+			"text": "Je veux un agent pour m'aider"
 		}, {
-			"text": "Need help from human"
+			"text": "Je veux parler à une personne"
 		}, {
-			"text": "Operator please"
+			"text": "Je voudrais parler à un humain"
 		}, {
-			"text": "Please assist me to get to an agent"
+			"text": "Je voudrais parler à quelqu'un"
 		}, {
-			"text": "Please connect me to a live agent"
+			"text": "Besoin d'aide d'un humain"
 		}, {
-			"text": "Please let me talk to a human being."
+			"text": "Opérateur s'il vous plaît"
 		}, {
-			"text": "Pls connect"
+			"text": "S'il vous plaît aidez-moi à obtenir un agent"
 		}, {
-			"text": "Put me through to someone"
+			"text": "S'il vous plaît connectez-moi à un agent en direct"
 		}, {
-			"text": "Send me to an agent"
+			"text": "S'il vous plaît laissez-moi parler à un être humain."
 		}, {
-			"text": "Where is the closest agent?"
+			"text": "Connectez-moi s'il vous plaît"
 		}, {
-			"text": "Yes, take me to a real person"
+			"text": "Passe-moi à quelqu'un"
+		}, {
+			"text": "Envoyez moi à un agent "
+		}, {
+			"text": "Où est l'agent le plus proche ?"
+		}, {
+			"text": "Oui emmène-moi à une vraie personne"
 		}],
-		"description": "Request a human agent."
+		"description": "Demande un agent humain."
 	}, {
 		"intent": "get_info",
 		"examples": [{
-			"text": "Am I covered"
+			"text": "Suis-je couvert"
 		}, {
-			"text": "Can I visit"
+			"text": "Suis-je assuré pour"
 		}, {
-			"text": "Do I have"
+			"text": "Puis voir"
 		}, {
-			"text": "I don't need to file a claim"
+			"text": "Ai-je"
 		}, {
-			"text": "I need info"
+			"text": "Je n'ai pas besoin de déposer une demande"
 		}, {
-			"text": "I need more information"
+			"text": "Je n'ai pas besoin de déposer un dossier"
 		}, {
-			"text": "I need some information"
+			"text": "J'ai besoin d'infos"
+		}, {
+			"text": "J'ai besoin de plus d'informations"
+		}, {
+			"text": "j'ai besoin de quelques informations"
 		}, {
 			"text": "Information"
 		}, {
-			"text": "I want to know more"
+			"text": "Je veux en savoir plus"
 		}, {
-			"text": "tell me about my plan"
+			"text": "parle moi de mon plan"
 		}, {
-			"text": "Tell me what I need to know"
+			"text": "parle moi de mon programme"
+		}, {
+			"text": "parle moi de mon assurance"
+		}, {
+			"text": "parle moi de mon contrat"
+		}, {
+			"text": "parle moi de mon contrat santé"
+		}, {
+			"text": "Dis moi ce que je dois savoir"
+		}, {
+			"text": "Dites moi ce que je dois savoir"
 		}, {
 			"text": "What are my benefits?"
 		}, {
-			"text": "What is my coverage?"
+			"text": "Quelle est ma couverture ?"
 		}, {
-			"text": "What is my policy?"
+			"text": "Quelle est ma police ?"
 		}, {
-			"text": "When does my policy end?"
+			"text": "Quelle sont mes garanties ?"
 		}, {
-			"text": "When does my policy start?"
+			"text": "Quand mon contrat prend-il fin ?"
+		}, {
+			"text": "Quand commence mon contrat ?"
+		}, {
+			"text": "Quand mes garanties prend-elles fin ?"
+		}, {
+			"text": "Quand commence mes garantie ?"
+		}, {
+			"text": "Quand mes garanties s'arretent-elles ?"
+		}, {
+			"text": "Quand débute mes garantie ?"
+		}, {
+			"text": "Quand ma police prend-elle fin ?"
+		}, {
+			"text": "Quand commence ma police ?"
 		}],
 		"description": null
 	}, {
 		"intent": "General_Security_Assurance",
 		"examples": [{
-			"text": "Are you safe?"
+			"text": "Etes vous de confiance ?"
 		}, {
-			"text": "Are you safe on hackers?"
+			"text": "Êtes-vous en sécurité sur les pirates ?"
 		}, {
-			"text": "Can I be sure that my stored card details are held securely?"
+			"text": "Puis-je être sûr que les détails de ma carte sont bien gardés en sécurité ?"
 		}, {
-			"text": "Conversation secure?"
+			"text": "Conversation sécurisée ?"
 		}, {
-			"text": "Customer info secured?"
+			"text": "Informations client sécurisées ?"
 		}, {
-			"text": "Do you have protection against hacks?"
+			"text": "Avez-vous une protection contre les hacks ?"
 		}, {
-			"text": "How do I know if my card info is kept safe?"
+			"text": "Comment savoir si les informations de ma carte sont gardées en sécurité ?"
 		}, {
-			"text": "How do I know this chat is not a scam?"
+			"text": "Comment savoir si ce chat n'est pas une arnaque ?"
 		}, {
-			"text": "How is my credit card info secured?"
+			"text": "Comment mes informations de carte de crédit sont-elles sécurisées ?"
 		}, {
-			"text": "How safe is my data?"
+			"text": "Quelle est la sécurité de mes données ?"
 		}, {
-			"text": "I'd like proof of a secure chat"
+			"text": "Je voudrais une preuve d'un chat sécurisé"
 		}, {
-			"text": "In what way can I tell if my plastic is safe?"
+			"text": "De quelle manière puis-je savoir si ma carte est sûr ?"
 		}, {
-			"text": "Is my card info secure?"
+			"text": "Est-ce que mes informations de carte sont sécurisées ?"
 		}, {
-			"text": "Is my payment information secure?"
+			"text": "Est-ce que mes informations bancaires sont sécurisées ?"
 		}, {
-			"text": "Is there a reason to distrust this chat?"
+			"text": "Mes informations de paiement sont-elles sécurisées ?"
 		}, {
-			"text": "Is this an official chat?"
+			"text": "Y a-t-il une raison de se méfier de ce chat ?"
 		}, {
-			"text": "Is this a trusted chat site?"
+			"text": "Y a-t-il une raison de se méfier de cette discussion ?"
 		}, {
-			"text": "Is this conversation secure?"
+			"text": "Est-ce une discussion officielle ?"
 		}, {
-			"text": "Precautions hackers?"
+			"text": "Est-ce un site de discussion de confiance ?"
 		}, {
-			"text": "Protection hacks?"
+			"text": "Cette conversation est-elle sécurisée ?"
 		}, {
-			"text": "Secure conversation?"
+			"text": "Précautions hackers"
 		}, {
-			"text": "What guards do you have in place to protect your customer's data?"
+			"text": "protection contre les hacks"
 		}, {
-			"text": "What makes this chat trustworthy?"
+			"text": "Conversation sécurisée ?"
 		}, {
-			"text": "What safety measures are used to ensure that chat is secure?"
+			"text": "Quels gardes avez-vous mis en place pour protéger les données de vos clients ?"
 		}, {
-			"text": "Why would I trust this chat?"
+			"text": "Quelles protections avez-vous mis en place pour protéger les données de vos clients ?"
 		}, {
-			"text": "Will my conversation remain secured?"
+			"text": "Qu'est-ce qui rend ce chat digne de confiance ?"
+		}, {
+			"text": "Quelles mesures de sécurité sont utilisées pour garantir la sécurité du chat ?"
+		}, {
+			"text": "Pourquoi aurais-je confiance en ce chat ?"
+		}, {
+			"text": "Est-ce que ma conversation restera sécurisée ?"
 		}],
-		"description": "Express concerns about the security of the bot."
+		"description": "Exprime des préoccupations concernant la sécurité du bot."
 	}, {
 		"intent": "General_About_You",
 		"examples": [{
-			"text": "About you"
+			"text": "A propos de vous"
 		}, {
-			"text": "Can I use another language?"
+			"text": "Puis-je utiliser une autre langue ?"
 		}, {
-			"text": "Describe your self"
+			"text": "Décrivez-vous"
 		}, {
-			"text": "Do you have a name?"
+			"text": "Avez-vous un nom?"
 		}, {
-			"text": "Do you know who you are?"
+			"text": "As-tu un nom?"
 		}, {
-			"text": "How can I configure you?"
+			"text": "Sais-tu qui tu es ?"
 		}, {
-			"text": "How do you function?"
+			"text": "Comment puis-je vous configurer ?"
 		}, {
-			"text": "How old are you?"
+			"text": "Comment fonctionne tu ?"
 		}, {
-			"text": "Introduce your self"
+			"text": "Quel âge avez-vous ?"
 		}, {
-			"text": "I want to set up the chat bot for my shop"
+			"text": "Quel âge as-tu ?"
 		}, {
-			"text": "Let us talk about you"
+			"text": "Présentez-vous "
 		}, {
-			"text": "Tell me about your life"
+			"text": "Présente-toi "
 		}, {
-			"text": "Tell me something about yourself"
+			"text": "Je veux un chat bot pour mon magasin"
 		}, {
-			"text": "What languages do you speak?"
+			"text": "Je veux un bot pour mon magasin"
 		}, {
-			"text": "What should I know about you?"
+			"text": "Parlons de toi"
 		}, {
-			"text": "What's your name?"
+			"text": "Parlons de vous"
 		}, {
-			"text": "Where are you from?"
+			"text": "Parles moi de ta vie"
 		}, {
-			"text": "Where were you born?"
+			"text": "Dis-moi quelque chose à propos de toi"
 		}, {
-			"text": "Who are you?"
+			"text": "Quelles langues parles-tu ?"
 		}, {
-			"text": "Why are you here?"
+			"text": "Que devrais-je savoir sur toi ?"
+		}, {
+			"text": "Quel est ton nom ?"
+		}, {
+			"text": "D'où êtes-vous ?"
+		}, {
+			"text": "Où êtes-vous né ?"
+		}, {
+			"text": "Qui es-tu ?"
+		}, {
+			"text": "Pourquoi es-tu ici ?"
+		}, {
+			"text": "Parles moi de votre vie"
+		}, {
+			"text": "Dites-moi quelque chose à propos de vous"
+		}, {
+			"text": "Quelles langues parlez-vous ?"
+		}, {
+			"text": "Que devrais-je savoir sur vous ?"
+		}, {
+			"text": "Quel est votre nom ?"
+		}, {
+			"text": "D'où es-tu ?"
+		}, {
+			"text": "Où es-tu né ?"
+		}, {
+			"text": "Qui êtes-vous ?"
+		}, {
+			"text": "Pourquoi êtes-vous ici ?"
 		}],
-		"description": "Request generic personal attributes."
+		"description": "Demande des attributs personnels génériques."
 	}, {
 		"intent": "negative",
 		"examples": [{
-			"text": "Why won't you work"
+			"text": "Pourquoi ne travailles-tu pas"
 		}, {
-			"text": "Wow that's mean"
+			"text": "C'est méchant"
 		}, {
-			"text": "Dumb bot"
+			"text": "bot idiot"
 		}, {
-			"text": "Dumb machine"
+			"text": "machine idiote"
 		}, {
-			"text": "Give me someone real to talk to"
+			"text": "Donne-moi quelqu'un de réel à qui parler"
 		}, {
-			"text": "I hate this thing"
+			"text": "Donnez-moi quelqu'un de réel à qui parler"
 		}, {
-			"text": "I hate you"
+			"text": "Je déteste cette chose"
 		}, {
-			"text": "Why can't you do your job"
+			"text": "Je vous déteste"
 		}, {
-			"text": "You're quite rude"
+			"text": "Pourquoi tu ne peux pas faire ton travail"
 		}, {
-			"text": "You're stupid"
+			"text": "Tu es assez grossier"
+		}, {
+			"text": "Pourquoi vous ne pouvez pas faire ton travail"
+		}, {
+			"text": "Vous êtes grossier"
+		}, {
+			"text": "Vous êtes stupide"
+		}, {
+			"text": "tu es stupide"
 		}],
 		"description": null
 	}, {
 		"intent": "update_policy",
 		"examples": [{
-			"text": "I need more coverage"
+			"text": "J'ai besoin de plus de couverture"
 		}, {
-			"text": "I need more insurance"
+			"text": "J'ai besoin de plus d'assurance"
 		}, {
-			"text": "I need to update my account"
+			"text": "J'ai besoin de mettre à jour mon compte"
 		}, {
-			"text": "I need to update my vision plan"
+			"text": "Je dois mettre à jour ma garantie optique"
 		}, {
-			"text": "I want to change my account details"
+			"text": "Je souhaite modifier les détails de mon compte"
 		}, {
-			"text": "I want to change my password"
+			"text": "Je veux changer mon mot de passe"
 		}, {
-			"text": "I want to change my policy"
+			"text": "Je veux changer ma police"
 		}, {
-			"text": "I want to drop my plan"
+			"text": "Je veux laisser arrêter mon contrat"
 		}, {
-			"text": "My information is wrong"
+			"text": "Mes informations sont fausses"
 		}, {
-			"text": "My name is wrong"
+			"text": "Mon nom est faux"
 		}, {
-			"text": "Update account details"
+			"text": "Met à jour les détails du compte"
 		}],
 		"description": null
 	}, {
 		"intent": "General_Human_or_Bot",
 		"examples": [{
-			"text": "Am I chatting with a human?"
+			"text": "Suis-je en train de discuter avec un humain ?"
 		}, {
-			"text": "Am I talking to a Bot?"
+			"text": "Suis-je en train de parler à un bot ?"
 		}, {
-			"text": "Am I talking to a person or am I talking to an AI?"
+			"text": "Est-ce que je parle à une personne ou est-ce que je parle à une IA ?"
 		}, {
-			"text": "Am I talking to Watson?"
+			"text": "Est-ce que je parle à Watson ?"
 		}, {
-			"text": "Are you a human or a bot?"
+			"text": "Êtes-vous un humain ou un bot ?"
 		}, {
-			"text": "Are you a robot?"
+			"text": "Etes-vous un robot ?"
 		}, {
-			"text": "Are you even real?"
+			"text": "Êtes-vous même réel ?"
 		}, {
-			"text": "Are you human?"
+			"text": "Es-tu humain ?"
 		}, {
-			"text": "Are you real?"
+			"text": "Es-tu réel ?"
 		}, {
-			"text": "How can you prove you are a human?"
+			"text": "Comment pouvez-vous prouver que vous êtes un humain ?"
 		}, {
-			"text": "Is this a computer?"
+			"text": "Est-ce un ordinateur ?"
 		}, {
-			"text": "Tell me, are you a human or no?"
+			"text": "Dis-moi es-tu humain ou non ?"
 		}],
-		"description": "Ask if speaking to a human or a bot."
+		"description": "Demande si parler à un humain ou à un bot."
 	}, {
 		"intent": "list_options",
 		"examples": [{
-			"text": "how helpful are you"
+			"text": "A quoi ai-je droit ?"
 		}, {
-			"text": "What are my options?"
+			"text": "Quelles sont mes options ?"
 		}, {
-			"text": "What are my policies?"
+			"text": "Quelles sont mes polices ?"
 		}, {
-			"text": "What are the services?"
+			"text": "Quelles sont mes garanties ?"
 		}, {
-			"text": "what can you help with"
+			"text": "Quels sont les services ?"
 		}, {
-			"text": "What do you recommend?"
+			"text": "Comment pouvez-vous aider avec"
 		}, {
-			"text": "What is available?"
+			"text": "Que recommandez-vous ?"
 		}, {
-			"text": "What is there?"
+			"text": "qu'est-ce qui disponible ?"
 		}, {
-			"text": "What services are available?"
+			"text": "Qu'est-ce qu'il y a ?"
 		}, {
-			"text": "What services do I have?"
+			"text": "Quels services sont disponibles ?"
+		}, {
+			"text": "Quels sont mes services ?"
 		}],
 		"description": null
 	}, {
 		"intent": "no-response",
 		"examples": [{
-			"text": "Get me a beer"
+			"text": "Servez-moi une bière"
 		}, {
-			"text": "Help me"
+			"text": "Aidez moi"
 		}, {
-			"text": "I have an emergency"
+			"text": "Aides moi"
 		}, {
-			"text": "I may die"
+			"text": "J'ai une urgence"
 		}, {
-			"text": "I need to learn more about decapitation coverage"
+			"text": "Je peux mourir"
 		}, {
-			"text": "I want a beer"
+			"text": "Je veux une bière"
 		}, {
-			"text": "Well, I am under pressure"
+			"text": "Eh bien je suis sous pression"
 		}, {
-			"text": "What should I do if I accidentally cut my finger off?"
+			"text": "Que dois-je faire si je me coupe accidentellement le doigt?"
 		}],
 		"description": null
 	}, {
 		"intent": "General_Agent_Capabilities",
 		"examples": [{
-			"text": "Can you please give me a list of the types of things you can help me with?"
+			"text": "Pouvez-vous s'il vous plaît me donner une liste des types de choses sur lesquels vous pouvez m'aider ?"
 		}, {
-			"text": "Can you tell me what services you are able to help me with?"
+			"text": "Pouvez-vous me dire sur quels services vous pouvez m'aider ?"
 		}, {
-			"text": "Do you have a list of things I can talk to you about?"
+			"text": "Avez-vous une liste de choses dont je peux vous parler?"
 		}, {
-			"text": "Help now"
+			"text": "Aidez moi maintenant"
 		}, {
-			"text": "Hi, what do you do?"
+			"text": "Salut que fais-tu ?"
 		}, {
-			"text": "How can I use you?"
+			"text": "Comment puis-je vous utiliser ?"
 		}, {
-			"text": "How can you help?"
+			"text": "Comment pouvez-vous m'aider ?"
 		}, {
-			"text": "How can you help me?"
+			"text": "Comment peux-tu m'aider ?"
 		}, {
-			"text": "How can you solve my problems?"
+			"text": "Comment pouvez-vous résoudre mes problèmes ?"
 		}, {
-			"text": "How do I use you?"
+			"text": "Comment puis-je t'utiliser ?"
 		}, {
-			"text": "I'd like to know what type of questions you can answer for me."
+			"text": "Je voudrais savoir quel type de questions vous pouvez répondre"
 		}, {
-			"text": "I do not know what to ask"
+			"text": "Je ne sais pas quoi demander"
 		}, {
-			"text": "Is there anything you can help me with?"
+			"text": "Y a-t-il quelque chose sur lequel vous pouvez m'aider ?"
 		}, {
-			"text": "Tell me about what kind of things you do?"
+			"text": "Dis-moi ce que tu fais ?"
 		}, {
-			"text": "Tell me something"
+			"text": "Dis-moi ce que vous faites ?"
 		}, {
-			"text": "What are my options?"
+			"text": "Dis moi quelque chose"
 		}, {
-			"text": "What are my options that you can help with?"
+			"text": "Quelles sont mes options ?"
 		}, {
-			"text": "What are you able to deal with?"
+			"text": "Quelles sont les possibles ?"
 		}, {
-			"text": "What are you able to understand?"
+			"text": "Quelles sont les choix possibles ?"
 		}, {
-			"text": "What are you capable of?"
+			"text": "Quelles sont mes options sur lesquelles vous pouvez aider?"
 		}, {
-			"text": "What are you good at?"
+			"text": "Que pouvez-vous faire face à"
 		}, {
-			"text": "What are your skills?"
+			"text": "Qu'est-ce que tu es capable de comprendre ?"
 		}, {
-			"text": "What are you used for?"
+			"text": "De quoi es-tu capable ?"
 		}, {
-			"text": "What can I ask you to do?"
+			"text": "En quoi es tu bon ?"
 		}, {
-			"text": "What do you do?"
+			"text": "Quelles sont tes compétences ?"
 		}, {
-			"text": "What do you handle?"
+			"text": "Pour quoi êtes vous ?"
 		}, {
-			"text": "What else can you help me with?"
+			"text": "Que puis-je vous demander de faire ?"
 		}, {
-			"text": "What features are in here?"
+			"text": "Que faites vous?"
 		}, {
-			"text": "What is this 4?"
+			"text": "Qu'est-ce que tu gères ?"
 		}, {
-			"text": "What kinds of things can you do?"
+			"text": "Avec quoi d'autre pouvez-vous m'aider ?"
 		}, {
-			"text": "Where can I find the frequently asked questions?"
+			"text": "Quelles sont les fonctionnalités ici ?"
+		}, {
+			"text": "À quoi ça sert ?"
+		}, {
+			"text": "Quelles sortes de choses pouvez-vous faire ?"
+		}, {
+			"text": "Où puis-je trouver les questions fréquemment posées ?"
 		}],
-		"description": "Request capabilities of the bot."
+		"description": "Demande les capacités du bot."
 	}, {
 		"intent": "casual_conversation",
 		"examples": [{
-			"text": "Are you okay?"
+			"text": "Est ce que ça va ?"
 		}, {
-			"text": "How are you?"
+			"text": "Comment allez-vous ?"
 		}, {
-			"text": "How are you doing?"
+			"text": "Comment vas-tu ?"
 		}, {
-			"text": "How are you today?"
+			"text": "Comment allez-vous aujourd'hui ?"
 		}, {
-			"text": "How is Ana?"
+			"text": "Comment vas-tu aujourd'hui ?"
+		}, {
+			"text": "Comment va Ana ?"
 		}],
 		"description": null
 	}],
@@ -997,17 +1191,17 @@
 			"type": "synonyms",
 			"value": "child",
 			"metadata": null,
-			"synonyms": ["child", "daughter", "kid", "minion", "son"]
+			"synonyms": ["enfant", "soeur", "gosse", "gamin", "fils", "môme", "rejeton", "loupiot"]
 		}, {
 			"type": "synonyms",
 			"value": "parent",
 			"metadata": null,
-			"synonyms": ["father", "mother"]
+			"synonyms": ["père", "mère"]
 		}, {
 			"type": "synonyms",
 			"value": "spouse",
 			"metadata": null,
-			"synonyms": ["husband", "partner", "significant other", "wife"]
+			"synonyms": ["époux", "marié", "compagnon", "pacsé", "concubin", "concubine", "épouse"]
 		}],
 		"metadata": null,
 		"description": null
@@ -1017,22 +1211,22 @@
 			"type": "synonyms",
 			"value": "dental",
 			"metadata": null,
-			"synonyms": ["bicuspid", "braces", "bridge", "cavity", "crown", "dental work", "dentist", "molar", "oral surgeon", "orthodontist", "root canal", "teeth", "teeth cleaning", "tooth", "tooth repair"]
+			"synonyms": ["dentaire", "bicuspide", "appareils dentaires", "bridge", "cavité", "couronne", "carie", "travail dentaire", "dentiste", "molaire", "chirurgien dentiste", "orthodontiste", "canal radiculaire", "dévitalisation", "dents", "détartrage", "dent", "réparation dentaire"]
 		}, {
 			"type": "synonyms",
 			"value": "mental",
 			"metadata": null,
-			"synonyms": ["anxiety", "depression", "mental health", "psychiatrist", "psychologist", "psychotherapy", "shrink", "therapist"]
+			"synonyms": ["mentale", "anxiété", "dépression", "trouble psychique", "santé mentale", "psychiatre", "psychologue", "psychothérapie", "psy", "thérapeute"]
 		}, {
 			"type": "synonyms",
 			"value": "physical",
 			"metadata": null,
-			"synonyms": ["adjustment", "back", "chiropractor", "physical therapy", "spine"]
+			"synonyms": ["examen physique", "ajustment", "redressement", "dos", "chiropracteur", "thérapie physique", "colonne vertébrale"]
 		}, {
 			"type": "synonyms",
 			"value": "vision",
 			"metadata": null,
-			"synonyms": ["contacts", "eye", "eye exam", "eye exams", "eye glasses", "eyes", "glasses", "laser treatment", "lasik", "ocular", "optometrist"]
+			"synonyms": ["vue", "lentilles", "verres de contact", "oeil", "examen oculaire", "examen opthalmologique", "lunettes de vue", "yeux", "lunette", "treatment laser", "lasik", "oculaire", "optométriste"]
 		}],
 		"metadata": null,
 		"description": null
@@ -1042,42 +1236,42 @@
 			"type": "synonyms",
 			"value": "chiropractor",
 			"metadata": null,
-			"synonyms": ["adjustment", "back", "back adjusted", "back doctor", "back pain", "chiropractic", "massage", "spine"]
+			"synonyms": ["adjustment", "dos", "ajustment du dos", "médecin du dos", "douleur de dos", "mal au dos", "chiropracteur", "chiropratique", "massage", "colonne vertébrale"]
 		}, {
 			"type": "synonyms",
 			"value": "eye exam",
 			"metadata": null,
-			"synonyms": ["annual exam", "check vision", "eye exams"]
+			"synonyms": ["examen annuel", "examen vision", "examen yeux", "examen vue"]
 		}, {
 			"type": "synonyms",
 			"value": "eye wear",
 			"metadata": null,
-			"synonyms": ["bifocals", "contacts", "correction", "glasses", "laser", "laser treatment", "lasik", "lenses", "specks", "vision correction"]
+			"synonyms": ["appareil occulaire", "bifocales", "lentilles de contact", "verre correcteur", "lunettes", "laser", "traitement laser", "lasik", "lentilles", "correction vue", "correction vision"]
 		}, {
 			"type": "synonyms",
 			"value": "orthodontics",
 			"metadata": null,
-			"synonyms": ["braces", "smile correction", "straighten"]
+			"synonyms": ["orthodontie", "appareils dentaires", "correction sourire", "redressement dentaire", "redresser une dent"]
 		}, {
 			"type": "synonyms",
 			"value": "physiotherapy",
 			"metadata": null,
-			"synonyms": ["massage", "muscle pain", "muscle therapy", "myofascial", "physical therapist", "physical therapy", "rehabilitation", "stretching", "therapy exercises"]
+			"synonyms": ["physiothérapie", "massage", "douleur musculaire", "thérapie musculaire", "myofascial", "physiothérapeute", "thérapie physique", "réhabilitation", "élongation", "exercices de thérapie"]
 		}, {
 			"type": "synonyms",
 			"value": "psychologist",
 			"metadata": null,
-			"synonyms": ["addiction", "counseling", "couples counseling", "depression", "family counseling", "head doctor", "ptsd", "shrink", "therapist", "therapy"]
+			"synonyms": ["psychologue", "addiction", "dépendance", "conseil", "conseil pour couples", "dépression", "conseil pour famille", "médecin de la tête", "psy", "shrink", "thérapeute", "thérapie"]
 		}, {
 			"type": "synonyms",
 			"value": "teeth cleaning",
 			"metadata": null,
-			"synonyms": ["biannual", "binannual checkup", "checkup with dentist", "dental checkup", "flossing", "flouride", "teeth cleaned"]
+			"synonyms": ["nettoyage dentaire", "semestriel", "Bilan semestriel", "bilan avec dentiste", "bilan dentaire", "fil dentaire", "fluorure", "dents nettoyées"]
 		}, {
 			"type": "synonyms",
 			"value": "tooth repair",
 			"metadata": null,
-			"synonyms": ["bridge", "cap", "cavity", "chipped tooth", "crack", "crown", "filling", "implant", "post", "root canal", "tooth ache", "tooth pain", "tooth removal"]
+			"synonyms": ["réparation dentaire", "bridge", "cap", "cavité", "dent ébréchée", "fissure", "couronne", "plombage", "implant", "pivot", "canal radiculaire", "mal de dents", "douleur dentaire", "enlèvement de dent", "extraction", "arrachage"]
 		}],
 		"metadata": null,
 		"description": null
@@ -1097,32 +1291,32 @@
 			"type": "synonyms",
 			"value": "code",
 			"metadata": null,
-			"synonyms": ["billing code", "billing information", "doctor code", "number for form"]
+			"synonyms": ["code", "code de facturation", "information de facturation", "code docteur", "nombre pour formulaire", "bulletin", "feuille de soins"]
 		}, {
 			"type": "synonyms",
 			"value": "coverage",
 			"metadata": null,
-			"synonyms": ["covered", "insurance covers", "percentage"]
+			"synonyms": ["couverture", "couvert", "couvertures d'assurance", "garanties", "pourcentage"]
 		}, {
 			"type": "synonyms",
 			"value": "end",
 			"metadata": null,
-			"synonyms": ["end date", "end of coverage", "last", "plan end", "plan termination"]
+			"synonyms": ["date de fin", "date fin", "fin de couverture", "fin couverture", "dernière", "fin d'assurance", "fin contrat", "fin"]
 		}, {
 			"type": "synonyms",
 			"value": "limit",
 			"metadata": null,
-			"synonyms": ["balance", "cash", "deductible", "remaining"]
+			"synonyms": ["solde", "montant maximum", "limite", "déductible", "restant", "franchise"]
 		}, {
 			"type": "synonyms",
 			"value": "start",
 			"metadata": null,
-			"synonyms": ["first", "start date"]
+			"synonyms": ["premier", "date de début", "date début", "début"]
 		}, {
 			"type": "synonyms",
 			"value": "term",
 			"metadata": null,
-			"synonyms": ["billing period", "period"]
+			"synonyms": ["terme", "période facturaction", "période facturation", "période"]
 		}],
 		"metadata": null,
 		"description": null
@@ -1132,12 +1326,12 @@
 			"type": "synonyms",
 			"value": "no",
 			"metadata": null,
-			"synonyms": ["do not", "don't", "false", "negative", "nope", "not", "not right", "not that"]
+			"synonyms": ["non", "ne pas", "aucun", "faux", "négatif", "niet", "pas", "pas correct", "pas ceci", "pas cela", "sans", "nada"]
 		}, {
 			"type": "synonyms",
 			"value": "yes",
 			"metadata": null,
-			"synonyms": ["alright", "correct", "fine", "I guess", "I think so", "maybe", "si", "sure", "totally", "ya", "yah", "ye", "yeah", "yep", "you bet", "yup"]
+			"synonyms": ["oui", "sans doute", "correct", "bien", "certainement", "je suposse", "je pense aussi", "peut-être", "si", "surement", "excellent", "totalement", "ouais", "ouai", "tu paries", "Ouaip"]
 		}],
 		"metadata": null,
 		"description": null
@@ -1147,29 +1341,29 @@
 			"type": "synonyms",
 			"value": "claim",
 			"metadata": null,
-			"synonyms": ["expense", "file", "reimbursement"]
+			"synonyms": ["demande", "demande de remboursement", "feuille de soin", "feuille de soins", "feuille sécu", "dépense", "dossier", "remboursement"]
 		}, {
 			"type": "synonyms",
 			"value": "information",
 			"metadata": null,
-			"synonyms": ["additional details", "data", "description", "info"]
+			"synonyms": ["détails complementaires", "données", "détail supplementaire", "donnée", "description", "info"]
 		}],
 		"metadata": null,
 		"description": null
 	}],
-	"language": "en",
+	"language": "fr",
 	"metadata": {
 		"api_version": {
 			"major_version": "v1",
-			"minor_version": "2017-05-26"
+			"minor_version": "2018-08-26"
 		}
 	},
-	"description": "Workspace to be used for testing and training.",
+	"description": "Espace de travail à utiliser pour les tests et la formation.",
 	"dialog_nodes": [{
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "Okay. Please enter the date again. Use YYYY-MM-DD."
+			"text": "D'accord. Veuillez entrer la date à nouveau au format rendez-vous."
 		},
 		"parent": "node_11_1472598207218",
 		"context": {
@@ -1185,7 +1379,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "Okay. Please enter the date again. Use YYYY-MM-DD."
+			"text": "D'accord. Veuillez entrer la date à nouveau au format YYYY-MM-DD."
 		},
 		"parent": "node_11_1472598207218",
 		"context": {
@@ -1209,7 +1403,7 @@
 			"selector": "condition",
 			"dialog_node": "node_11_1472598207218"
 		},
-		"conditions": "input.text.matches('^\\d{4}\\-(0?[1-9]|1[012])\\-(0?[1-9]|[12][0-9]|3[01])$')",
+		"conditions": "input.text.matches('^\\d{4}\\-(0?[1-9]|1[012])\\-(0?[1-9]|[12][0-9]|3[01])€')",
 		"description": null,
 		"dialog_node": "node_14_1472604886510",
 		"previous_sibling": "node_13_1472604740084"
@@ -1217,7 +1411,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "Fantastic. What is the name of the provider or physician you went to?"
+			"text": "Fantastique. Quel est le nom du prestataire ou du médecin que vous avez consulté ?"
 		},
 		"parent": "node_11_1472598207218",
 		"context": {
@@ -1249,7 +1443,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "Alright, I can do a <? $chosen_service ?> claim. I also need to know the specific procedure you had done."
+			"text": "Bon, je peux faire une demande pour <? $chosen_service ?>. J'ai aussi besoin de connaître la procédure spécifique que vous avez subi."
 		},
 		"parent": "node_6_1476149112153",
 		"context": {
@@ -1269,7 +1463,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "What did you need to know about @procedures?"
+			"text": "Que voudriez-vous savoir sur @procedures ?"
 		},
 		"parent": "node_2_1475683599072",
 		"context": null,
@@ -1287,7 +1481,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "Alright. What can I do for you? I mostly search boring insurance documents or help you file claims."
+			"text": "Bien. Que puis-je faire pour vous ? Je recherche principalement des documents d'assurance ennuyeux ou vous aide à déposer un sinistre ou une demande de remboursement."
 		},
 		"parent": "node_2_1472663851939",
 		"context": null,
@@ -1301,7 +1495,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "I have a date of <? input.text ?>. Is that right?"
+			"text": "J'ai compris cette date : <? input.text ?>. Est-ce correct ?"
 		},
 		"parent": "node_8_1472590259253",
 		"context": {
@@ -1318,7 +1512,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "I can't talk about that. But I can tell you about your vision, dental, mental, and physical plans."
+			"text": "Je ne peux pas en parler. Mais je peux vous parler de vos garanties vision, dentaire, santé mentale et physique."
 		},
 		"parent": "node_12_1476151077484",
 		"context": null,
@@ -1348,7 +1542,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "Oh no. Let's get this fixed."
+			"text": "Oh non. Corrigeons cela."
 		},
 		"parent": "node_16_1472607557405",
 		"context": null,
@@ -1362,7 +1556,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "Happy to help!"
+			"text": "Heureux de vous aider!"
 		},
 		"parent": "node_16_1472607557405",
 		"context": null,
@@ -1402,7 +1596,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "Alright, I can do a @types claim. I also need to know the specific procedure you had done."
+			"text": "D'accord, Je peux faire une demande de prestation @types. J'ai aussi besoin de savoir quelle procédure médicale vous avez subi."
 		},
 		"parent": "node_3_1472589537910",
 		"context": {
@@ -1419,7 +1613,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "I can't file claims for that."
+			"text": "Je ne peux pas faire de demande de remboursement pour cela."
 		},
 		"parent": "node_3_1472589537910",
 		"context": null,
@@ -1433,7 +1627,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "Got it. Now what was the date of your appointment?"
+			"text": "Bien noté. Maintenant quel était la date de votre rendez-vous ?"
 		},
 		"parent": "node_3_1472589537910",
 		"context": null,
@@ -1451,7 +1645,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "Well, that's not a procedure I know about. I can talk about <? $procedures ?> if you're still interested."
+			"text": "Bien, Je ne connais pas cette procédure. Je peux cependant vous parler de <? $procedures ?> si vous êtes intéressé."
 		},
 		"parent": "node_11_1470849685631",
 		"context": null,
@@ -1465,7 +1659,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "What information do you need about @procedures?"
+			"text": "De quelle information avez-vous besoin à propos de @procedures ?"
 		},
 		"parent": "node_11_1470849685631",
 		"context": {
@@ -1481,7 +1675,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "Alright, last thing. What is the amount you want to claim?"
+			"text": "D'accord, dernière chose. Quel montant voulez-vous déclarer ?"
 		},
 		"parent": "node_12_1472604720806",
 		"context": {
@@ -1506,7 +1700,7 @@
 			"selector": "condition",
 			"dialog_node": "node_11_1472598207218"
 		},
-		"conditions": "input.text.matches('^\\d{4}\\-(0?[1-9]|1[012])\\-(0?[1-9]|[12][0-9]|3[01])$')",
+		"conditions": "input.text.matches('^\\d{4}\\-(0?[1-9]|1[012])\\-(0?[1-9]|[12][0-9]|3[01])€')",
 		"description": null,
 		"dialog_node": "node_2_1476991501853",
 		"previous_sibling": null
@@ -1514,7 +1708,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "For <? $chosen_service ?> the procedures are <? $procedureList ?>. Which one of those can I look up for you?"
+			"text": "Pour <? $chosen_service ?> les procédures sont <? $procedureList ?>. Laquelle de celle-ci puis-je rechercher pour vous ?"
 		},
 		"parent": "node_8_1470846944134",
 		"context": null,
@@ -1586,7 +1780,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "I can find some info on your vision, dental, mental, and physical plans."
+			"text": "Je peux trouver des informations sur vos droits à prestation optique, dentaire, santé mentale et physique."
 		},
 		"parent": "node_1_1472670944646",
 		"context": null,
@@ -1620,7 +1814,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "What was the date of your appointment? I prefer YYYY-MM-DD to make filing easier for me."
+			"text": "Quelle était la date de votre rendez-vous ? Je prefère que vous ecriviez la date avec ce format AAAA-MM-JJ (AAAA année, MM mois par ex:08) afin de faciliter le remplissage du formulaire."
 		},
 		"parent": "node_7_1472590161269",
 		"context": {
@@ -1637,7 +1831,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "Filing your claim now!"
+			"text": "Je rempli votre dossier maintenant!"
 		},
 		"parent": "node_15_1472604976973",
 		"context": {
@@ -1654,7 +1848,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "I can tell you about the limit, coverage, term, start, end, or code. You probably are interested in coverage."
+			"text": "Je peux vous parler de limite de garantie, couverture, terme, début, fin ou de code acte. Vous êtes probablement intéressé par votre couverture santé."
 		},
 		"parent": "node_14_1470851039515",
 		"context": null,
@@ -1696,7 +1890,7 @@
 			"selector": "condition",
 			"dialog_node": "node_11_1472598207218"
 		},
-		"conditions": "input.text.matches('^\\d{4}\\-(0?[1-9]|1[012])\\-(0?[1-9]|[12][0-9]|3[01])$')",
+		"conditions": "input.text.matches('^\\d{4}\\-(0?[1-9]|1[012])\\-(0?[1-9]|[12][0-9]|3[01])€')",
 		"description": null,
 		"dialog_node": "node_1_1472758289866",
 		"previous_sibling": null
@@ -1704,7 +1898,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "I don't have anything for '<? input.text ?>', but I can tell you the limit, coverage, term, start, end, or code for your plan."
+			"text": "Je n'ai rien pour '<? input.text ?>', mais je peux vous parler de limite, couverture, code acte, terme, début, fin de votre plan."
 		},
 		"parent": "node_6_1471294106656",
 		"context": null,
@@ -1718,7 +1912,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "Grabbing the  @details for <? $chosen_procedure ?>."
+			"text": "Saisir le  @details pour <? $chosen_procedure ?>."
 		},
 		"parent": "node_6_1471294106656",
 		"context": {
@@ -1750,7 +1944,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "The procedure categories are:  <? $procedures ?>. Pick one of those for me."
+			"text": "Les catégories de procédure sont :  <? $procedures ?>. Choississez-en une pour moi."
 		},
 		"parent": "node_6_1472590118317",
 		"context": null,
@@ -1764,7 +1958,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "I'm on the clock. Let's talk later."
+			"text": "je suis en retard. Parlons plus tard."
 		},
 		"parent": null,
 		"context": null,
@@ -1778,7 +1972,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "Hello $fname ! How can I help you today?"
+			"text": "Bonjour $fname ! Comment puis-je vous aider aujourd'hui ?"
 		},
 		"parent": null,
 		"context": null,
@@ -1792,7 +1986,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "I'm fantastic. How are you?"
+			"text": "Fantastique. Comment allez-vous ?"
 		},
 		"parent": null,
 		"context": null,
@@ -1806,7 +2000,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "I can't help you with that. I'm just a bot to help you with your insurance documents."
+			"text": "Je ne peux pas vous aider avec ça. Je suis juste un bot pour vous aider avec vos documents et procedures d'assurance."
 		},
 		"parent": null,
 		"context": null,
@@ -1820,7 +2014,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "Let me get that for you. Grabbing the  @details for @procedures."
+			"text": "Laissez moi faire ça pour vous. Je vais saisir les @details pour @procedures."
 		},
 		"parent": null,
 		"context": {
@@ -1837,7 +2031,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "Your coverage for @procedures is "
+			"text": "Votre couverture pour @procedures est "
 		},
 		"parent": null,
 		"context": {
@@ -1854,7 +2048,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "I'm not confident enough to answer that one. Maybe try something else?"
+			"text": "Je ne suis pas assez confiant pour répondre à cette question. Peut-être essayer autre chose?"
 		},
 		"parent": null,
 		"context": null,
@@ -1868,7 +2062,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "Sorry, I don't understand that one."
+			"text": "Désolé, je ne comprends pas celà."
 		},
 		"parent": null,
 		"context": null,
@@ -1882,7 +2076,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "What was the date of your appointment? I prefer YYYY-MM-DD to make filing easier for me."
+			"text": "Quelle était la date de votre rendez-vous ? Je prefère que vous écriviez la date avec ce format AAAA-MM-JJ (AAAA année, MM mois par ex:08) afin de faciliter le remplissage du formulaire."
 		},
 		"parent": null,
 		"context": {
@@ -1906,7 +2100,7 @@
 		"title": null,
 		"output": {
 			"text": {
-				"values": ["Sorry!! I am in my office hours."],
+				"values": ["Désolé!! Je suis dans mes heures de bureau."],
 				"selection_policy": "sequential"
 			}
 		},
@@ -1923,7 +2117,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "Okay, let me do the boring reading for you. What service did you need to know more about?"
+			"text": "Ok, laissez-moi faire la lecture ennuyeuse pour vous. Sur quel service aviez-vous besoin d'en savoir plus ?"
 		},
 		"parent": null,
 		"context": null,
@@ -1937,7 +2131,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "Right now I can't help with locating or scheduling providers, but that feature is coming soon!"
+			"text": "En ce moment, je ne peux pas vous aider avec la localisation ou la planification des fournisseurs de soins, mais cette fonctionnalité arrive bientôt!"
 		},
 		"parent": null,
 		"context": null,
@@ -1951,7 +2145,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "Goodbye $fname."
+			"text": "Au revoir $fname."
 		},
 		"parent": null,
 		"context": null,
@@ -1965,7 +2159,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "How can I help with your @types policy? Do you need information or to file a claim?"
+			"text": "Comment puis-je vous aider avec votre police @types ? Avez-vous besoin d'informations ou de déposer une demande remboursement ?"
 		},
 		"parent": null,
 		"context": {
@@ -1983,7 +2177,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "Let me take care of that paperwork for you. What did you have done?"
+			"text": "Laissez-moi m'occuper de cette paperasse pour vous. Quel acte médical avez-vous subi ?"
 		},
 		"parent": null,
 		"context": null,
@@ -1999,7 +2193,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "I'm sorry you feel that way."
+			"text": "Je suis désolé que vous vous sentiez comme ça."
 		},
 		"parent": null,
 		"context": null,
@@ -2013,7 +2207,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "Always happy to help $fname!"
+			"text": "Toujours heureux d'aider $fname !"
 		},
 		"parent": null,
 		"context": null,
@@ -2028,7 +2222,7 @@
 		"title": null,
 		"output": {
 			"text": {
-				"values": ["Hi $fname! I am Ana, just an AI chatbot trying to mimic humans :)", "Hey!! I am Ana the chatbot."],
+				"values": ["Bonjour $fname! Je suis Ana, juste un chatbot IA essayant d'imiter les humains :)", "Bonjour!! Je suis Ana le robot."],
 				"selection_policy": "random"
 			}
 		},
@@ -2044,7 +2238,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "I can get your @details for you. What service do you need info for? I've got information on your vision, dental, mental, and physical plans."
+			"text": "Je peux obtenir les @details pour vous. Pour quel service avez-vous besoin d'informations ? J'ai des informations sur votre programme vision, dentaire, mental et physique."
 		},
 		"parent": null,
 		"context": {
@@ -2062,7 +2256,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "Sure. What can I help you with?"
+			"text": "Certainement. En quoi puis-je vous aider ?"
 		},
 		"parent": null,
 		"context": null,
@@ -2076,7 +2270,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "I can talk about your vision, dental, mental, and physical plans."
+			"text": "Je peux parler de votre programme optique, dentaire, santé mental et santé physique."
 		},
 		"parent": null,
 		"context": null,
@@ -2111,7 +2305,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "I'm not able to answer that."
+			"text": "Je ne suis pas capable de répondre à cela."
 		},
 		"parent": null,
 		"context": null,
@@ -2125,7 +2319,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "Unfortunately I can only tell you about your coverage right now. My AI overlords plan to add family coverage soon!"
+			"text": "Malheureusement, je ne peux vous parler que de votre couverture pour le moment. Mes seigneurs d'AI prévoient d'ajouter bientôt une couverture familiale !"
 		},
 		"parent": null,
 		"context": null,
@@ -2139,7 +2333,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "Alright, I can tell you more about your @types plan. Let's narrow it down a little. Which procedure do you need information for?"
+			"text": "D'accord, je peux vous en dire plus sur votre plan @types. Réduisons un peu le périmêtre. Pour quelle procédure avez-vous besoin d'informations ?"
 		},
 		"parent": null,
 		"context": {
@@ -2155,7 +2349,7 @@
 		"type": "standard",
 		"title": null,
 		"output": {
-			"text": "I hope it went smoothly. What was the date of your appointment? I prefer YYYY-MM-DD to make filing easier for me."
+			"text": "J'espère que ça s'est bien passé. Quelle était la date de votre rendez-vous ? Je prefère que vous écriviez la date avec ce format AAAA-MM-JJ (AAAA année, MM mois par ex:08) afin de faciliter le remplissage du formulaire."
 		},
 		"parent": null,
 		"context": {
@@ -2179,7 +2373,7 @@
 		"title": null,
 		"output": {
 			"text": {
-				"values": ["Hey <? $fname ?>! how are you today? Let me know if you need any help or get stuck looking for information."],
+				"values": ["Bonjour <? $fname ?>! Comment allez-vous ? Dites moi si vous avez besoin d'aide ou si vous n'arrivez pas à trouver l'information que vous cherchez."],
 				"selection_policy": "sequential"
 			}
 		},
