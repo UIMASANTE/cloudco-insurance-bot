@@ -52,15 +52,15 @@
 .benefitfacts {
     display: flex;
     flex-direction: column;
-    min-width: 200px;
+    min-width: 250px;
     font-size: 12px;
     margin-left: 30px;
     padding: 10px;
 }
 
 .factlabel {
-    max-width: 70px;
-    min-width: 70px;
+    max-width: 110px;
+    min-width: 110px;
     font-weight: bold;
     color: #919FA8;
     text-transform: uppercase;
@@ -367,6 +367,4 @@
     border: none;
     text-align: center;
   }
-
-
 }
