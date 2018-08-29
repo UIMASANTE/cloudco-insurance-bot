@@ -107,6 +107,7 @@ function initConversation() {
 
     // check if the workspace ID is specified in the environment
     conversationWorkspace = process.env.CONVERSATION_WORKSPACE;
+    console.log(`conversationWorkspace '${conversationWorkspace}' ...`);
 
     // if not, look it up by name or create one
     if (!conversationWorkspace) {
@@ -332,7 +333,7 @@ function buildContextObject(req, callback) {
                 message = message.toFixed(2);
                 message = message.toString();
             } else {
-                reprompt.message = "You didn't enter a valid amount. Please enter the amount paid for the procedure.";
+                reprompt.message = "Vous n'avez pas entré de montant valide. S'il vous plaît entrer le montant payé pour la procédure.";
                 return callback(null, reprompt);
             }
         } else if (context.claim_step === "date") {
@@ -345,12 +346,16 @@ function buildContextObject(req, callback) {
                 cDate = new Date(userTime);
             }
 
+            console.log("date:", date);
             console.log("Reference date:", cDate);
-            userDate = chrono.parseDate(date, cDate);
+            console.log("data=", JSON.stringify(req.body));
+            //var obj = req.body.context.entities[0];
+            //console.log(obj.entity, " (date)=", obj.value);
+            userDate = chrono.parseDate(date); //, cDate);
 
             // If the date is NaN reprompt for correct format
             if (isNaN(userDate)) {
-                reprompt.message = "That doesn't look like a date. Please try again.";
+                reprompt.message = "Cela ne ressemble pas à une date. Veuillez réessayer.";
                 return callback(null, reprompt);
             } else if (userDate) {
                 userDate.setHours(cDate.getHours());
@@ -360,7 +365,7 @@ function buildContextObject(req, callback) {
                 console.log("Date:", userDate);
                 // If user tries to claim a date in the future
                 if (userDate.getTime() > cDate.getTime()) {
-                    reprompt.message = "Sorry, Marty McFly, you can't make a claim in the future. Please try the date again.";
+                    reprompt.message = "Désolé, Marty McFly (retour vers le futur), vous ne pouvez pas faire de demande de remboursement pour le futur. S'il vous plaît essayer à nouveau de saisir la date.";
                     return callback(null, reprompt);
                 } else { // Otherwise format the date to YYYY-MM-DD - Ana will also verify
                     var month = '' + (userDate.getUTCMonth() + 1),
@@ -377,7 +382,7 @@ function buildContextObject(req, callback) {
                     message = [year, month, day].join('-');
                 }
             } else {
-                reprompt.message = "That doesn't look like a valid date. Please try again.";
+                reprompt.message = "Cela ne ressemble pas à une date valide. Veuillez réessayer.";
                 return callback(null, reprompt);
             }
         }
@@ -472,6 +477,8 @@ function updateContextObject(response, userPolicy, callback) {
     text = response.output.text[0]; // Only display the first response
     response.output.text = '';
 
+    //console.log("updateContextObject::response=", JSON.stringify(response))
+
     // Store the user selected detail to narrow down the info
     if (context.chosen_service) {
         var service = context.chosen_service;
@@ -487,22 +494,34 @@ function updateContextObject(response, userPolicy, callback) {
     // Store the user selected procedure to query and create object of details
     if (context.chosen_procedure) {
         procedure = context.chosen_procedure;
-        console.log("Procedure:", procedure);
         var policies = userPolicy.policies;
+        console.log("Procedure:", procedure, " policies.length:", policies.length);
 
         for (var n = 0; n < policies.length; n++) {
             // ignore case when comparing as procedure in conversation model is all lowercase
             // but the display value for policies has a mixed case.
+            console.log("Police:", policies[n].title.toUpperCase(), " limite:", policies[n].claimLimit);
+
             if (policies[n].title.toUpperCase() === procedure.toUpperCase()) {
                 procedure_details = {
-                    "limit": "$" + policies[n].claimLimit,
-                    "claimed": "$" + policies[n].amountClaimed,
+                    "limite": "€" + policies[n].claimLimit,
+                    "payé": "€" + policies[n].amountClaimed,
+                    "couverture": policies[n].percentCovered + "%",
+                    "terme": policies[n].scope,
+                    "début": policies[n].startDate,
+                    "fin": policies[n].endDate,
+                    "code": policies[n].code,
+                    "dossier": policies[n].claims
+                    /*
+                    "limit": "€" + policies[n].claimLimit,
+                    "claimed": "€" + policies[n].amountClaimed,
                     "coverage": policies[n].percentCovered + "%",
-                    "term": policies[n].scope,
+                    "terme": policies[n].scope,
                     "start": policies[n].startDate,
                     "end": policies[n].endDate,
                     "code": policies[n].code,
                     "claims": policies[n].claims
+                    */
                 };
             }
         }
@@ -515,11 +534,33 @@ function updateContextObject(response, userPolicy, callback) {
         detail = context.chosen_detail;
         procedure_details = context.procedure_details;
 
-        text = "Your " + detail + " for " + procedure + " is " + procedure_details[detail];
+        console.log("detail=", detail, " procedure=", procedure, " procedure_details=", JSON.stringify(procedure_details))
+
+        var trad = {
+          "coverage" : "couverture",
+          "term" : "terme",
+          "start" : "début",
+          "end" : "fin",
+          "limit" : "limite",
+          "code": "code",
+          "file": "dossier",
+          "couverture" : "couverture",
+          "terme" : "terme",
+          "début" : "début",
+          "fin" : "fin",
+          "limite" : "limite",
+          "dossier": "dossier"
+        }
+        //text = "Your " + detail + " for " + procedure + " is " + procedure_details[detail];
+        text = "Votre " + trad[detail] + " pour " + procedure + " est " + procedure_details[trad[detail]];
 
         // Also display the amount already claimed when showing coverage detail
         if (detail === "coverage") {
-            text = text + " and you have claimed " + procedure_details.claimed + " of " + procedure_details.limit;
+            //text = text + " and you have claimed " + procedure_details.payé + " of " + procedure_details.limite;
+            if(procedure_details.limite)
+            text = text + " et vous avez déjà reçu " + procedure_details.payé + " de " + procedure_details.limite;
+            else
+            text = text + " et vous avez déjà perçu " + procedure_details.payé + "";
         }
 
         // Null out the chosen variables in context to reset the conversation options
