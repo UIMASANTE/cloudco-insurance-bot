@@ -197,6 +197,9 @@ function createBenefitDetail(policy) {
     detail.className = 'benefitdetail';
     detail.id = policy.title;
 
+    var startDate = moment(policy.startDate).format('DD-MM-YYYY');
+    var endDate = moment(policy.endDate).format('DD-MM-YYYY');
+
     detail.innerHTML =
         '<div class="benefitfacts">' +
         '<div class="benefitfact">' +
@@ -217,11 +220,11 @@ function createBenefitDetail(policy) {
         '</div>' +
         '<div class="benefitfact">' +
         '<div class="factlabel">début</div>' +
-        '<div class="factcheck">Jan 1 2018</div>' +
+        '<div class="factcheck">' + startDate + '</div>' + //Jan 1 2018
         '</div>' +
         '<div class="benefitfact">' +
         '<div class="factlabel">fin</div>' +
-        '<div class="factcheck">Dec 31 2019</div>' +
+        '<div class="factcheck">' + endDate + '</div>' + //Dec 31 2019
         '</div>' +
         '<div class="benefitfact">' +
         '<div class="factlabel">code</div>' +
