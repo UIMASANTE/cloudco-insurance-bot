@@ -583,17 +583,21 @@ app.post('/api/ana', function(req, res) {
 
         getUserPolicy(req, function(err, doc) {
             if (err) {
+                console.log("app.js (no body.context)-> getUserPolicy :: ERR");
                 res.status(err.code || 500).json(err);
             } else {
+                console.log("app.js (no body.context)-> getUserPolicy");
                 processChatMessage(req, res);
             }
         });
     } else {
+        console.log("app.js (with body.context) && UserPolicy");
         processChatMessage(req, res);
     }
 }); // End app.post 'api/ana'
 
 function processChatMessage(req, res) {
+    console.log("app.js -> chatbot.sendMessage");
     chatbot.sendMessage(req, function(err, data) {
         if (err) {
             console.log("Error in sending message: ", err);
@@ -620,6 +624,7 @@ function processChatMessage(req, res) {
 
             // File a claim for the user
             if (context.claim_step === "verify") {
+              console.log("context.claim_step === verify");
                 var claimFile = {
                     date: null,
                     benefit: null,
@@ -652,6 +657,8 @@ function processChatMessage(req, res) {
                 });
 
             } else {
+                console.log("context.claim_step !== verify");
+                console.log("res.status(200)");
                 res.status(200).json(data);
             }
         }
