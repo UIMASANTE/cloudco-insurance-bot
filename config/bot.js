@@ -155,6 +155,8 @@ var chatbot = {
         var userPolicy = req.session.userPolicy;
         var owner = req.user.username;
 
+        console.log("bot.js -> chatbot.sendMessage");
+
         buildContextObject(req, function(err, params) {
 
             if (err) {
@@ -190,7 +192,7 @@ var chatbot = {
                     }
                     var conv = data.context.conversation_id;
 
-                    console.log("Got response from Ana: ", JSON.stringify(data));
+                    console.log("bot.js -> Got response from Ana: ", JSON.stringify(data));
 
                     updateContextObject(data, userPolicy, function(err, res) {
 
@@ -347,11 +349,13 @@ function buildContextObject(req, callback) {
             }
 
             console.log("date:", date);
-            console.log("Reference date:", cDate);
-            console.log("data=", JSON.stringify(req.body));
+            console.log("Reference cDate:", cDate);
+            //console.log("data=", JSON.stringify(req.body));
             //var obj = req.body.context.entities[0];
             //console.log(obj.entity, " (date)=", obj.value);
             userDate = chrono.parseDate(date); //, cDate);
+
+            console.log("userDate:", userDate);
 
             // If the date is NaN reprompt for correct format
             if (isNaN(userDate)) {
@@ -406,9 +410,7 @@ function buildContextObject(req, callback) {
             params.context.services = services;
             params.context.procedures = procedures;
         });
-
     }
-
     return callback(null, params);
 }
 
@@ -553,6 +555,10 @@ function updateContextObject(response, userPolicy, callback) {
         }
         //text = "Your " + detail + " for " + procedure + " is " + procedure_details[detail];
         text = "Votre " + trad[detail] + " pour " + procedure + " est " + procedure_details[trad[detail]];
+
+        if (detail === trad["début"] || detail === trad["fin"]  || detail === trad["scope"] ) {
+          text = "Aspect temporel du contrat ";
+        }
 
         // Also display the amount already claimed when showing coverage detail
         if (detail === "coverage") {
