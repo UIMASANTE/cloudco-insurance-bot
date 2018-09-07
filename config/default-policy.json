@@ -13,32 +13,7 @@
       "startDate": "2018-02-01T00:00:00.000Z",
       "endDate": "2019-01-31T00:00:00.000Z",
       "code": 100,
-      "claims": [
-        {
-          "date": "2014-08-23",
-          "benefit": "Lunettes",
-          "provider": "Docteur Claire",
-          "amount": "180",
-          "outcome": "Complète",
-          "payment": 80
-        },
-        {
-          "date": "2016-08-29",
-          "benefit": "Lunettes",
-          "provider": "Docteur Claire",
-          "amount": "300",
-          "outcome": "Complète",
-          "payment": 240
-        },
-        {
-          "date": "2018-08-08",
-          "benefit": "Lunettes",
-          "provider": "Docteur Gilbert",
-          "amount": "100.00",
-          "outcome": "AUCUN",
-          "payment": 0
-        }
-      ]
+      "claims": []
     },
     {
       "type": "optique",
@@ -67,16 +42,7 @@
       "startDate": "2018-02-01T00:00:00.000Z",
       "endDate": "2019-01-31T00:00:00.000Z",
       "code": 110,
-      "claims": [
-        {
-          "date": "2018-08-02",
-          "benefit": "Lentilles",
-          "provider": "Docteur Claire",
-          "amount": "120",
-          "outcome": "FULL",
-          "payment": 96
-        }
-      ]
+      "claims": []
     },
     {
       "type": "optique",
