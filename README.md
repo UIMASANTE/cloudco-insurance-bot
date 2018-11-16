@@ -1,8 +1,8 @@
 # Cloud Insurance Co. - Main web site and chat bot
 
-| **master** | [![Build Status](https://travis-ci.org/IBM-Cloud/insurance-bot.svg?branch=master)](https://travis-ci.org/UIMASANTE/cloudco-insurance-bot) |
+| **master** | [![Build Status](https://travis-ci.org/UIMASANTE/cloudco-insurance-bot.svg?branch=master)](https://travis-ci.org/UIMASANTE/cloudco-insurance-bot) |
 | ----- | ----- |
-| **dev** | [![Build Status](https://travis-ci.org/IBM-Cloud/insurance-bot.svg?branch=dev)](https://travis-ci.org/IBM-Cloud/insurance-bot) |
+| **dev** | [![Build Status](https://travis-ci.org/UIMASANTE/cloudco-insurance-bot.svg?branch=dev)](https://travis-ci.org/UIMASANTE/cloudco-insurance-bot) |
 
 This repository is part of the larger [Cloud Insurance Co.](https://github.com/IBM-Cloud/cloudco-insurance) project.
 
